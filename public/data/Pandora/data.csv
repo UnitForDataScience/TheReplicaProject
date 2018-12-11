@@ -1,0 +1,40 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+125_01,Pandora,1869,chalk,39.625,Thomas Eustace and Martha Smith,1,1883,Newcastle,,,yes,54.978252,-1.61778,1,shipping
+125_01,Pandora,1869,chalk,39.625,Lord Faringdon,2,1885,Berkshire,,,yes,51.668497326,-1.651830726,1,politician
+125_01,Pandora,1869,chalk,39.625,Faringdon Collection,3,1934,Berkshire,,,yes,51.67195,-1.64943,0,museum
+125_02,Pandora,1869,chalk,37,William Graham,1,1870,Glasgow,,,yes,55.86423700,-4.25180600,1,politician
+125_02,Pandora,1869,chalk,37,Charles Butler,2,1886,Hertfordshire,,,yes,51.8098,-0.2377,115.1,lawyer
+125_02,Pandora,1869,chalk,37,Charles Butler Grandson,3,1910,Newport,,,yes,51.7343313,0.4690888,0,descendant
+125_02,Pandora,1869,chalk,37,F E Smith,4,1964,Bournemouth,,,yes,50.720806,-1.904755,0,writer
+125_02,Pandora,1869,chalk,37,Stone Gallery David Hughes,5,1968,Newcastle upon Tyne,,,yes,54.97328,-1.61396,1,dealer
+125_02,Pandora,1869,chalk,37,L S Lowry,6,1968,Manchester,,,yes,53.480713,-2.234377,1,artist
+125_02,Pandora,1869,chalk,37,Christies,7,2000,London,yes,,,51.57742746,-0.029682,0,auction house
+125_02,Pandora,1869,chalk,37,John Schaeffer,8,2000,Sydney,,yes,,-33.865143,151.2099,"2,643,750",collector
+125_02,Pandora,1869,chalk,37,Christies,9,2004,London,yes,,,51.57742746,-0.029682,0,auction house
+125_02,Pandora,1869,chalk,37,Private collection,10,2004,Off coast,,,yes,52.49422,1.816006,"1,300,000",collector
+125_02,Pandora,1869,chalk,37,Christies,11,2014,London,yes,,,51.57742746,-0.029682,unsold,auction house
+125_03,Pandora,1871,oil,51.5,John Graham,1,1871,Ayrshire,,,yes,55.852,-4.8847,825,merchant
+125_03,Pandora,1871,oil,51.5,Christies,2,1887,London,yes,,,51.57742746,-0.029682,0,auction house
+125_03,Pandora,1871,oil,51.5,Charles Butler,3,1887,Hertfordshire,,,yes,51.8098,-0.2377,577.1,lawyer
+125_03,Pandora,1871,oil,51.5,Hubert Lavie Butler,4,1910,Hertfordshire,,,yes,51.8098,-0.2377,0,descendant
+125_03,Pandora,1871,oil,51.5,Patrick Butler,5,1956,Hertfordshire,,,yes,51.8098,-0.2377,0,descendant
+125_03,Pandora,1871,oil,51.5,Knight Frank and Rutley,6,1956,London,yes,,,51.56705545,-0.04527437,unsold,auction house
+125_03,Pandora,1871,oil,51.5,Christies,7,1965,London,yes,,,51.57742746,-0.029682,unsold,auction house
+125_03,Pandora,1871,oil,51.5,Christies,8,1966,London,yes,,,51.57742746,-0.029682,unsold,auction house
+125_03,Pandora,1871,oil,51.5,Stone Gallery David Hughes,9,1966,Newcastle upon Tyne,,,yes,54.97328,-1.61396,1260,dealer
+125_03,Pandora,1871,oil,51.5,Private collection,10,1969,Off coast,,,yes,52.485021,     1.809483,1250,collector
+125_03,Pandora,1871,oil,51.5,Sothebys,11,2014,London,yes,,,51.54624657,-0.16545449,unsold,auction house
+125_04,Pandora,1878,chalk,38.5,Leonard Valpy,1,1882,London,yes,,,51.38392546,-0.04762393,120.55,lawyer
+125_04,Pandora,1878,chalk,38.5,Christies,2,1888,London,yes,,,51.57742746,-0.029682,0,auction house
+125_04,Pandora,1878,chalk,38.5,George A Drummond,2,1888,Montreal,,yes,,45.5016889,-73.567256,157.1,politician
+125_04,Pandora,1878,chalk,38.5,Lord Leverhulme,3,1919,Port Sunlight,,,yes,53.345,-2.9943,1,manufacturer
+125_04,Pandora,1878,chalk,38.5,Lady Lever Gallery,4,1919,Port Sunlight,,,yes,53.355,-2.9943,1,museum
+125_05,Pandora,1879,crayon,24,T Watts Dunton,1,1880,Putney,,,yes,51.4619,-0.2058,0,writer
+125_05,Pandora,1879,crayon,24,Mrs T Watts Dunton,2,1880,Putney,,,yes,51.4619,-0.2058,0,writer
+125_05,Pandora,1879,crayon,24,Sothebys,3,1939,London,yes,,,51.54624657,-0.16545449,0,auction house
+125_05,Pandora,1879,crayon,24,C J Sawyer,4,1939,London,yes,,,51.59322981,-0.30913114,46,dealer
+125_05,Pandora,1879,crayon,24,Grenville Winthrop,5,1940,New York,,yes,,40.71278370,-74.00594130,1,lawyer
+125_05,Pandora,1879,crayon,24,Fogg Museum,6,1942,Cambridge,,yes,,42.37361580,-71.10973350,0,museum
+125_06,Pandora,1860-70,pen & brown ink,6.374,W M Rossetti,1,1870,London,yes,,,51.54847813,-0.03073457,1,writer
+125_06,Pandora,1860-70,pen & brown ink,6.374,Charles Fairfax Murray,2,1883,London,yes,,,51.60453756,0.06122559,1,dealer
+125_06,Pandora,1860-70,pen & brown ink,6.374,Birmingham Museum,3,1903,Birmingham,,,yes,52.48015000,-1.90361200,1,museum

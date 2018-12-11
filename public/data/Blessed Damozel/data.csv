@@ -1,0 +1,15 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+104_01, Blessed Damozel ,1873, black and red chalks,31.0,Frederick Leyland,1,1873,Liverpool,,,yes,53.38837508,-2.92035654,136.1,shipping
+104_01, Blessed Damozel ,1873, black and red chalks,31.0,Christies,2,1892,London,yes,,,51.57743,-0.029682,0,auction house
+104_01, Blessed Damozel ,1873, black and red chalks,31.0,Thomas McLean Gallery,3,1892,London,yes,,,51.56028,0.04491182,136.1,dealer
+104_01, Blessed Damozel ,1873, black and red chalks,31.0,Gertrude Marchioness of Normanby,4,1948,Yorkshire,,,yes,53.801277,-1.548567,1,collector
+104_01, Blessed Damozel ,1873, black and red chalks,31.0,Lady Gertrude Elizabeth Davis,5,1985,Gloucester,,,yes,51.8642449 ,-2.2381560002,0,descendant
+104_01, Blessed Damozel ,1873, black and red chalks,31.0,Andrew Lloyd Webber,6,1995,London,yes,,,51.490989,-0.126651,1,composer
+104_02,Blessed Damozel,1875-78, oil with predella,68.5,William Graham,1,1878,Glasgow,,,yes,55.864237,-4.251806,1157,politician
+104_02,Blessed Damozel,1875-78, oil with predella,68.5,James Dyson Perrins,2,1885,Worcestershire,,,yes,52.18935,-2.22001,1,politician
+104_02,Blessed Damozel,1875-78, oil with predella,68.5,Charles W Dyson Perrins,3,1887,Worcestershire,,,yes,52.193636,-2.221575,0,manufacturer
+104_02,Blessed Damozel,1875-78, oil with predella,68.5,Grenville Winthrop,4,1934,New York City,,yes,,40.7127837,-74.0059413,630,lawyer
+104_02,Blessed Damozel,1875-78, oil with predella,68.5,Fogg Museum,5,1943,Cambridge MA,,yes,,42.3736158,-71.1097335,0,museum
+104_03,Blessed Damozel,1875-81, oil with predella,59.5,Frederick Leyland,1,1881,Liverpool,,,yes,53.38837508,-2.92035654,500,shipping
+104_03,Blessed Damozel,1875-81, oil with predella,59.5,Hon Mrs O'Brien Lady Inchiquin,2,1892,Shropshire,,,yes,52.5865,-2.7038,1029,collector
+104_03,Blessed Damozel,1875-81, oil with predella, 59.5 ,Lady Lever Gallery,3,1969,Port Sunlight,,,yes,53.355,-2.9943,0,museum

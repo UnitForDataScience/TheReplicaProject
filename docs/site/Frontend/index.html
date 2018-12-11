@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Front End - The Replica Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Front End";
+    var mkdocs_page_input_path = "Frontend.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Replica Project</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Backend/">Back End</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Front End</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#version-2-front-end">Version 2 - Front End</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#file-v2publiccssindexcss">File : v2/public/css/index.css</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjschord_diagramjs">File : v2/public/js/chord_diagram.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjscomparisontabjs">File : v2/public/js/comparisonTab.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjshistogramsjs">File : v2/public/js/histograms.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjsmappingtextjs">File : v2/public/js/mappingText.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjsindexjs">File : v2/public/js/index.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjsdatatablessetupjs">File : v2/public/js/datatablesSetup.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2publicjstransactionnetworkjs">File : v2/public/js/transactionNetwork.js</a></li>
+        
+            <li><a class="toctree-l3" href="#file-v2indexhtml">File : v2/index.html</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Replica Project</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Front End</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="version-2-front-end">Version 2 - Front End</h1>
+<p>In this knowledge of HTML, CSS3 and Javascript knowledge is assumed. The template we used for the version can be found <a href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">here</a>. Most of the styling stuff is used from Bootstrap 4. If you are interested in styling changes visit <code>v2/index.html</code> and change accordingly with bootstrap.</p>
+<h4 id="file-v2publiccssindexcss">File : v2/public/css/index.css</h4>
+<p>This file contains CSS 3 code for some of the utilities we used in developing visualisation. In the code we mentioned in the comments that for what widget/visualisation the styling is done. You can reference that. Here it is assumed that the developer knows CSS.</p>
+<h4 id="file-v2publicjschord_diagramjs">File : v2/public/js/chord_diagram.js</h4>
+<p>This file is imported in index.html and the code in this file is responsible for populating the data for chord visuals. </p>
+<p>Algorithm: 
+It makes a hit on REST API: <code>/herberger/chordDiagram.php</code> to collect the data using Jquery get request.
+The data is expected in following format</p>
+<pre><code class="json">    {
+      &quot;type&quot; : &quot;Success&quot;,
+      &quot;message&quot; : &quot;Data found&quot;,
+      &quot;data&quot;: {
+          &quot;matrix&quot;: { 
+            &quot;&lt;year&gt;&quot;:{
+                &quot;&lt;Seller Name&gt;&quot; : {
+                &quot;&lt;Buyer Name&gt;&quot;: &lt;How Many Paintings&gt;
+              }
+            } 
+         }
+      }
+    }
+</code></pre>
+
+<p>The data returned has a dictionary with keys as year numbers. We run a loop on the dictionary key to build each and every chord diagram. To build the chord diagram for every year range <code>build_chord</code> will run and it takes 3 parameters matrix(adjacency matrix for the graph), names(owners who were involved in the transactions) and id which will be used to fetch the specific <code>svg</code> for this chord. 
+How an individual chord is created is a follows:</p>
+<ol>
+<li>First the names are sorted on the basis of type of profession they are in. So dealers will have priority 1, museums will have priority 2 and individuals will have priority 3. </li>
+<li>Then we create a adjaceny matrix array as D3 requires that. </li>
+<li>Once that is done we have all the ingridients for the creating the d3 chord. If you don't know how to use D3 chord diagram follow this <a href="https://beta.observablehq.com/@mbostock/d3-chord-diagram">tutorial</a>.</li>
+<li>To provide with the on hover lighting effect what we have done is we have set the opacity of the ribbons in the D3 chord with opacity 0.7. Once you hover over a ribbon the opacity is set to 1 which makes the ribbon prominent. Once you hover out the opacity is again set to 0.7.</li>
+<li>It has built with traditional d3 visualisation so please follow the tutorial mentioned if you don't understand how to make d3 chord charts.</li>
+</ol>
+<h4 id="file-v2publicjscomparisontabjs">File : v2/public/js/comparisonTab.js</h4>
+<p>This file is also imported by index.html and the code in the file populates the Trajectory Comparison maps.
+The data is expected in the following format.</p>
+<pre><code class="json">  {
+    &quot;type&quot; : &quot;Success&quot;,
+    &quot;message&quot; : &quot;Data found&quot;,
+    &quot;data&quot;: {
+      &quot;&lt;Replica Id&gt;&quot;: JSONArray([(Latitude), (Longitude), (Year), (Painting Type), (Size), (City)......])
+    }
+  }
+</code></pre>
+
+<p>Algorithm:</p>
+<ol>
+<li>Whenever a user clicks on the left panel option <code>Trajectory Comparison</code> after 1 second the update is called. Why there is a delay because Leaflet, the library used for map visuals won't work properly if the maps are not visible and it takes time for browser to render things. So to compensate for that we put a delay.</li>
+<li>Now how maps are populated is first <code>/herberger/getComparisonNetwork.php?name=&lt;painting name&gt;</code> is called using ajax get of jquery. Painting name is automatically picked from the dropdown and the content in the dropdown is populated in <code>v2/public/js/index/js</code>. </li>
+<li>The data collected is in form of key value pair where key is the replica id for the painting value is information array of different geographical information. This is sufficient to populate the data for Leaflet.</li>
+<li>So based on number of replicas tiles are created and are populated with maps and trajectories. </li>
+<li>PS: onchange listener is active on the dropdown. This code will be available in this file. So if you change the dropdown the content updates. The id for the dropdown is <code>#comparisonPaintingPicker</code>.</li>
+</ol>
+<h4 id="file-v2publicjshistogramsjs">File : v2/public/js/histograms.js</h4>
+<p>This file is also imported by index.html and the code in the fie populates the content for Histogram Visuals.</p>
+<p>Algorithm:</p>
+<ol>
+<li>A little knowledge on Highcharts.js is assumed here. If you don't know, you don't need to learn entire thing. Just read the options of <a href="https://www.highcharts.com/demo/column-stacked-and-grouped">this</a> visualisation.</li>
+<li>In the visualisation mentioned we have changed just the data and remaining things are same so it should be pretty starightford to build something in this domain.</li>
+<li>If you add more excel sheets or plan to add more artists, you will need to update the content in the options of the Highcharts.js. It should automatically make the changes for you.</li>
+</ol>
+<h4 id="file-v2publicjsmappingtextjs">File : v2/public/js/mappingText.js</h4>
+<p>Some of the names in the excel sheets had complex names so those could not have been used as Directory names. So we created a function which on front end could map those name to the correct semantics. There is a function called <code>mappingName</code> in this file which takes a name and transforms it to original text. If you come accross such names use this function for that. </p>
+<h4 id="file-v2publicjsindexjs">File : v2/public/js/index.js</h4>
+<p>This file is responsible for populating data on the Narratives of the painting. But at the same time this file collects some data used in multiple places in the system. </p>
+<p><strong> Jquery Function </strong></p>
+<p>The programming model used in the this file is Async waterfall model which gives as Asynchronous flow a synchronous touch (Trust me you need this one here). </p>
+<ol>
+<li>First thing the function does is it initialize the leaflet maps in <code>narrativeMaps</code> variable. It calls another function <code>initializeNarrativeMaps</code> which does that. It does that using <code>leaflet.js</code>. The reason this is done first is because <code>leaflet.js</code> with <code>openstreet maps</code> sometimes acts really funny and does not load the complete content. So please keep this order.</li>
+<li>Next, it collects information about all the paintings from <code>/herberger/getPaintings.php</code> REST and populates them in <code>('narrativePaintingPicker', 'paintingsPaintingPicker', 'comparisonPaintingPicker', 'networkPaintingPicker')</code> which are ids of HTML select boxes. If you want to populate this data in more select boxes, just add that to the array in <code>allPaintingsSelectBox</code> function.</li>
+<li>
+<p>It calls <code>setReplicasForNarratives</code> which in itself has another waterfall model. In that waterfall two things are happening.</p>
+<ol>
+<li>The data(names) about replicas of a painting is collected using the REST <code>/herberger/getReplicaInfo.php</code>. This will be populated in <img alt="Screenshot" src="../img/update.png" /></li>
+<li>
+<p>Next thing it populates the replica information by calling <code>updateReplicaInfo</code>. Where that function call does following jobs.</p>
+<ol>
+<li>Clear the previous leaflet markers if any. At cold start they would be empty</li>
+</ol>
+<p><code>$("#narrativesImage").attr("src", data['data']['image']);
+        for (var iter = 0; iter &lt; narrativeMarkers.length; iter++) {
+            narrativeMaps.removeLayer(narrativeMarkers[iter]);
+        }
+        narrativeMaps.removeLayer(narrativePolyLine);
+        narrativeMaps.removeLayer(narrativeDecorator);
+        narrativeMarkers = [];
+        narrativeLatLngs = [];</code></p>
+<ol>
+<li>
+<p>Update <code>ownerInfo</code> variable which keeps all the data for the current request. This is required as it stores the information for following navigations. <img alt="Screenshot" src="../img/ownerInfo.png" /></p>
+</li>
+<li>
+<p>Populate the information of the painting</p>
+<pre><code>   ```
+        var year = data['data']['csvData'][data['data']['csvData'].length - 1]['YEAR'];
+                        $('#narrativeYear').html('Year: ' + year);
+                        var medium = data['data']['csvData'][data['data']['csvData'].length - 1]['MEDIUM'];
+                        $('#narrativeMedium').html('Medium: ' + medium);
+                        var size = data['data']['csvData'][data['data']['csvData'].length - 1][' SIZE Height (in)'];
+                        $('#narrativeHeight').html('Height(in): ' + size);
+                        var location = data['data']['csvData'][data['data']['csvData'].length - 1]['owner_LOC'];
+                        $('#narrativePlace').html('Place: ' + location);
+   ```
+</code></pre>
+<p><img alt="Screenshot" src="../img/painting.png" /></p>
+</li>
+<li>
+<p>After that, the information collected in <code>ownerInfor</code> is used to collect all the latitude and longitude to populate the markers on the maps. Those latitudes and longitudes are also used to create a polyline which presents the trajectory.</p>
+</li>
+<li>
+<p>Finally it calls the <code>moveOwnerCounter</code> which uses two variable <code>ownerInfo</code> and <code>ownerCounter</code> (at starting initialized to 0) and populates information on 
+<img alt="Screenshot" src="../img/owner.png" /></p>
+</li>
+</ol>
+<p>Here a circular queue is used to move over different owners where <code>ownerCounter</code> keeps a check on which owner we are currently looking at.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If you see this code.    </p>
+<p><code>"$('#visuals_call').on('click', function () {
+        setTimeout(function () {
+            narrativeMaps.invalidateSize()
+            narrativeMaps.fitBounds(group.getBounds())
+        }, 500)
+    });"</code> </p>
+</li>
+</ol>
+<p>This is just to refresh the maps when the user clicks on visuals from the top menu. It makes sure that leaflet loads the maps properly.  </p>
+<p><strong> getThisOut() and toggleInstruction() </strong><br />
+These functions are simply showing the instructions in the modal when you click on</p>
+<p><img alt="Screenshot" src="../img/instruction.png" /></p>
+<p>You should update them if you add more visualisations. Make sure when you add that button in html file you put a on click listener calling <code>getThisOut()</code>.  </p>
+<h4 id="file-v2publicjsdatatablessetupjs">File : v2/public/js/datatablesSetup.js</h4>
+<p>This javascript file is responsible for <code>Collection Browser</code> tab. It uses <a href="http://loudev.com/">multiselect</a> and <a href="https://datatables.net/">datatables</a> to do that. They are pretty standard libraries and most of the configuration that we use is by default configuration of those to libraries. </p>
+<ol>
+<li>The first thing this script does is that it collects the information from <code>/herberger/getRawData.php</code>. </li>
+<li>Next thing it does is that it initializes the <code>.multi-select</code> class. To know which classes belong to this CSS class, go to <code>v2/index.html</code> and look for <code>multi-select</code> class objects. All of them are wrapped into a <code>div</code>. It should be easy to find. The configuration is by default same as multiselect but in <code>afterSelect</code> and <code>afterDeselect</code> just one function call is added <code>updateSearchCriteria</code> which will be explained later. </li>
+<li>
+<p>After that all the data is inserted in the datatable in the following code snippet.</p>
+<pre><code>for (iter in data) {
+
+    $('#rawDataSrc').append('&lt;tr&gt;&lt;td&gt;' + data[iter]['paintingName']
+                  + '&lt;/td&gt;&lt;td&gt;&lt;img src="' + data[iter]['paintingImage'] + '" alt="No-Image" class="img-thumbnail img-fluid" style="max-height:300px; max-width:200px;"/&gt;&lt;/td&gt;&lt;td&gt;'
+                  + data[iter]['replicaId'] + '&lt;/td&gt;' +
+                  '&lt;td&gt;' + data[iter]['ownerNumber'] + '&lt;/td&gt;' +
+                  '&lt;td&gt;' + data[iter]['ownerName'] + '&lt;/td&gt;' +
+                  '&lt;td&gt;' + data[iter]['ownerCity'] + '&lt;/td&gt;' +
+                  '&lt;td&gt;&lt;img src="' + data[iter]['ownerImage'] + '" alt="No-Image" class="img-thumbnail img-fluid" style="max-height:300px; max-width:200px;"/&gt;&lt;/td&gt;&lt;td&gt;' + data[iter]['ownerProfession'] + '&lt;/td&gt;&lt;/tr&gt;')
+                       }
+</code></pre>
+</li>
+<li>
+<p>To update data on <code>Advance Filters</code> we will use Datatables search mechanism. </p>
+</li>
+<li>
+<p>First we update the search criteria in <code>updateSearchCriteria</code> function.</p>
+<ol>
+<li>
+<p>First it starts with initializing variables</p>
+<p><code>var array = {
+                            '#paitingFilter': true,
+                            '#replicaFilter': true,
+                            '#owernFilter': true,
+                            '#professionFilter': true,
+                            '#ownerCityFilter': true,
+                            '#ownerNumberFilter': true
+                        };</code></p>
+<p>This is just saying we need to update the following <code>ids</code>.</p>
+</li>
+<li>
+<p>Then we look at multiselect ids if they are set or have some values then the respective multiselect does not need to be udpated. Plus those who need to be updated we change there values in the following code.</p>
+<pre><code>                    for (iter in data) {
+
+                        if (($('#paitingFilter').val().length == 0 || $('#paitingFilter').val().indexOf(data[iter]['paintingName']) != -1)
+                            &amp;&amp; ($('#replicaFilter').val().length == 0 || $('#replicaFilter').val().indexOf(data[iter]['replicaId']) != -1)
+                            &amp;&amp; ($('#professionFilter').val().length == 0 || $('#professionFilter').val().indexOf(data[iter]['ownerProfession']) != -1)
+                            &amp;&amp; ($('#owernFilter').val().length == 0 || $('#owernFilter').val().indexOf(data[iter]['ownerName']) != -1)
+                            &amp;&amp; ($('#ownerCityFilter').val().length == 0 || $('#ownerCityFilter').val().indexOf(data[iter]['ownerCity']) != -1)
+                            &amp;&amp; ($('#ownerNumberFilter').val().length == 0 || $('#ownerNumberFilter').val().indexOf(data[iter]['ownerNumber']) != -1)) {
+                            ownerNames[data[iter]['ownerName'].trim()] = true;
+                            paintingNames[data[iter]['paintingName'].trim()] = true;
+                            replicaIds[data[iter]['replicaId'].trim()] = true;
+                            professions[data[iter]['ownerProfession'].trim()] = true;
+                            ownerCity[data[iter]['ownerCity'].trim()] = true;
+                            ownerNumber[data[iter]['ownerNumber'].trim()] = true;
+                        }
+                    }
+</code></pre>
+</li>
+<li>
+<p>That will collect new data if something has been selected and changes are required in advance filter column.</p>
+</li>
+<li>PS the data is not update yet in datatables yet. When the user will click on the <code>Apply</code> button, the information that has been just update in advance filter column that will we used in <code>Search</code> features of the datatables. I have used <code>$.fn.dataTable.ext.search.push</code> call in <code>searchRawData</code> which is a <code>Datatables</code> api. That will update the raw data content. </li>
+</ol>
+</li>
+<li>
+<p>Some of the datatables configuration that have been changed are as follows.</p>
+</li>
+</ol>
+<pre><code>{
+    paging: true,
+    columnDefs: [
+        {
+            width: 200,
+            targets: [0, 1, 2, 3, 4, 5]
+        }
+    ],
+    &quot;searching&quot;: true,
+    fixedColumns: true
+}
+</code></pre>
+
+<h4 id="file-v2publicjstransactionnetworkjs">File : v2/public/js/transactionNetwork.js</h4>
+<p>This file populates the data on the transactional network tab. It has one function which encapsulates all the work for this visualisation. That function is called from <code>v2/public/js/index.js</code> as some of the data required by this visualisation can be reused from the data collected in narratives. The function is <code>startNetorkSimulation</code>. The idea of this visualisation is taken from followind <code>D3</code> visuals.</p>
+<pre><code>* https://bl.ocks.org/puzzler10/4438752bb93f45dc5ad5214efaa12e4a (A simple D3 force directed graph)  
+* http://bl.ocks.org/eyaler/10586116 (Highlighting of the nodes)
+* https://bl.ocks.org/denisemauldin/cdd667cbaf7b45d600a634c8ae32fae5 (The filtering of nodes).
+</code></pre>
+<ol>
+<li>It starts with <code>setReplicasForNetwork</code> function inside <code>startNetorkSimulation</code> where it collects the data. Now if a painting is selected then <code>getSocialNetworkData.php</code> will be called else <code>allSocialNetwork.php</code> will be called. Also there is a Jquery <code>timeslider</code> which tells from which year to which year the data is required. </li>
+<li>The data that is returned from the REST end is configurable straight into the d3 code. Once that data is collected <code>update_node_data_filter</code> is called which propogates the <code>create</code>, <code>update</code>, <code>delete</code> flow of the d3.js.</li>
+<li>
+<p>Most of the idea is taken from the links above, but, one feature that we added which is different from that is the tooltips. For that what we do is we collect all the network information of the node when you hover on the node in the following code.</p>
+<p><code>link.style('stroke-width', function (l) {
+if (mapping.indexOf(l['replicaId']) != -1) {
+    if (l.source !== d) {
+        if (array.indexOf(l.source) === -1) {
+            l.source.s = new Set();
+            l.source.s.add(l['replicaId']);
+            array.push(l.source);
+        } else {
+            var index = array.indexOf(l.source);
+            array[index].s.add(l['replicaId']);
+        }
+    }
+    if (l.target !== d) {
+        if (array.indexOf(l.target) === -1) {
+            l.target.s = new Set();
+            l.target.s.add(l['replicaId']);
+            array.push(l.target);
+        } else {
+            var index = array.indexOf(l.target);
+            array[index].s.add(l['replicaId']);
+        }
+    }
+    return 4;
+}
+else {
+    return 1;
+}
+});</code></p>
+</li>
+<li>
+<p>The <code>array</code> in the above code is collecting all the nodes which should have higher opacity as well as changes the stroke width to 4 of the links which are a part of the network of that node on which you hovered on.</p>
+</li>
+<li>In that same mouseover call a loop over all the nodes is started and all the nodes of the <code>array</code> are given a higher opacity value and others are made translucent. While that is a done a rectangle and text is also appended to the nodes which have higher opacity which acts as a tooltip. </li>
+<li>Once you move the mouse out of the node the node, all the changes are reverted back. Nothing fancy just plain old javascript functionality doing the trick.</li>
+<li>Some function <code>toggle_museum</code>, <code>toggle_auction</code>, and <code>toggle_individual</code> as the name implies are used to toggle the display of the types of the nodes in the graph. </li>
+</ol>
+<h4 id="file-v2indexhtml">File : v2/index.html</h4>
+<p>I wanted to mention some points regarding the content in the html file.</p>
+<ul>
+<li>There is some textual content (Bibliography, Methods and Instructions etc) which was provided by Professor Julie Codell. For that I used free online (tool)[https://document.online-convert.com/convert-to-html] which can convert a docx to html. PS: only the textual content is converted and not the literature of the research. Make sure you do the same.</li>
+<li>The template used is Bootstrap 4 template. </li>
+<li>Most of the styling done is pretty basic and easy to understand bootstrap syntax. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Backend/" class="btn btn-neutral" title="Back End"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Backend/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

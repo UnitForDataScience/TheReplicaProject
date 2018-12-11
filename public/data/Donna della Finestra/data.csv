@@ -1,0 +1,30 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+109_01,Donna della Finestra,1870,pastel,33.125,Henry Virtue Tebbs,1,1870,London,yes,,,51.44967645,-0.27353347,0,writer
+109_01,Donna della Finestra,1870,pastel,33.125,Christies,2,1900,London,yes,,,51.57742746,-0.029682,0,auction house
+109_01,Donna della Finestra,1870,pastel,33.125,Asa Lingard,3,1900,Bradford,,,yes,53.795984,-1.759398,507.13,merchant
+109_01,Donna della Finestra,1870,pastel,33.125,Bradford Art Gallery,4,1926,Bradford,,,yes,53.7833,-1.75,0,museum
+109_02,Donna della Finestra,1870,black and white chalk,23,John Bibby,1,1870,Liverpool,,,yes,53.53261481,-3.09980356,1,shipping
+109_02,Donna della Finestra,1870,black and white chalk,23,Christies,2,1899,London,yes,,,51.57742746,-0.029682,0,auction house
+109_02,Donna della Finestra,1870,black and white chalk,23,Agnew,3,1899,London,yes,,,51.5067,-0.127,42,dealer
+109_03,Donna della Finestra,1870,pastel on green paper,33,S M Milne,1,1882,Leeds,,,yes,53.79648,-1.54785,53.11,writer
+109_03,Donna della Finestra,1870,pastel on green paper,33,Sothebys,2,1921,London,yes,,,51.54624657,-0.16545449,0,auction house
+109_03,Donna della Finestra,1870,pastel on green paper,33,D Croal Thomson,3,1921,London,yes,,,51.54624657,-0.16545449,1,dealer
+109_03,Donna della Finestra,1870,pastel on green paper,33,Whitworth Art Gallery,4,1921,Manchester,,,yes,53.460278,-2.229444,165,museum
+109_04,Donna della Finestra,1879,oil,39.5,Frederick Startridge Ellis,1,1879,London,yes,,,51.4652515,-0.14786539,535.1,publisher
+109_04,Donna della Finestra,1879,oil,39.5,Christies,2,1885,London,yes,,,51.57742746,-0.029682,0,auction house
+109_04,Donna della Finestra,1879,oil,39.5,Cyril Flower Lord Battersea,3,1885,Bolton,,,yes,53.58333,-2.43333,535.1,artist
+109_04,Donna della Finestra,1879,oil,39.5,William R Moss,4,1885,Bolton,,,yes,53.58333,-2.43333,538.1,manufacturer
+109_04,Donna della Finestra,1879,oil,39.5,Mrs W R Moss,5,1923,Bolton ,,,yes,53.58333,-2.43333,0,descendant
+109_04,Donna della Finestra,1879,oil,39.5,Colonel W E Moss,6,1923,Sonning-on-Thames,,,yes,54.059388,-3.515625,0,descendant
+109_04,Donna della Finestra,1879,oil,39.5,Sothebys,7,1937,London,yes,,,51.54624657,-0.16545449,0,auction house
+109_04,Donna della Finestra,1879,oil,39.5,Scott and Fowles,8,1937,New York,,yes,,40.73061,-73.935242,300,dealer
+109_04,Donna della Finestra,1879,oil,39.5,Grenville Winthrop,9,1938,New York,,yes,,40.7127837,-74.0059413,$818 ,lawyer
+109_04,Donna della Finestra,1879,oil,39.5,Fogg Museum,10,1943,"Cambridge, MA",,yes,,42.3736158,-71.1097335,0,museum
+109_05,Donna della Finestra,1880,colored chalks,33,William Graham,1,1880,Glasgow,,,yes,55.864237,-4.251806,1,politician
+109_05,Donna della Finestra,1880,colored chalks,33,Miss Alice Goldman,2,1920,Falmouth,,,yes,50.15257099,-5.06627,1,descendant
+109_05,Donna della Finestra,1880,colored chalks,33,John Monck,3,1940,Wiltshire,,,yes,51.068785,-1.794472,0,descendant
+109_05,Donna della Finestra,1880,colored chalks,33,Christies,4,1965,London,yes,,,51.57742746,-0.029682,0,auction house
+109_05,Donna della Finestra,1880,colored chalks,33,Sally  Oliver,5,1965,London,yes,,,51.44244147,-0.22964651,240,collector
+109_05,Donna della Finestra,1880,colored chalks,33,Leicester Galleries,6,1988,London,yes,,,51.38392546,-0.04762393,1,gallery
+109_05,Donna della Finestra,1880,colored chalks,33,Andrew Lloyd Webber,7,1989,"Kingsclere, Hampshire",,,yes,51.44777901,-0.26173473,1,composer
+109_06,Donna della Finestra,1881,oil,37,Birmingham Museum,1,1883,Birmingham,,,yes,52.48015,-1.903612,47.5,museum

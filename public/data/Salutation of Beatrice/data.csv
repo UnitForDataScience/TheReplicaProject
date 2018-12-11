@@ -1,0 +1,24 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+132_01,The Salutation of Beatrice,1859,oil,29.5,William Morris,1,1859,London,yes,,,51.51412826,-0.14666944,1,artist
+132_01,The Salutation of Beatrice,1859,oil,29.5,Sir Frederick Burton,2,1865,London,yes,,,51.63308574,-0.14670426,0,artist
+132_01,The Salutation of Beatrice,1859,oil,29.5,James Leathart,3,1867,Newcaste,,,yes,54.978252,-1.61778000000003,367.1,manufacturer
+132_01,The Salutation of Beatrice,1859,oil,29.5,T H Leathart,4,1893,Newcastle,,,yes,54.978252,-1.61778000000003,0,descendant
+132_01,The Salutation of Beatrice,1859,oil,29.5,F J Tennant,5,1900,Lympne,,,yes,51.0667,1.0333,250,manufacturer
+132_01,The Salutation of Beatrice,1859,oil,29.5,Micheal Tennant,6,1942,Lympne,,,yes,51.0667,1.0333,0,descendant
+132_01,The Salutation of Beatrice,1859,oil,29.5,Leger Galleries,7,1957,London,yes,,,51.44444185,-0.26402259,500,dealer
+132_01,The Salutation of Beatrice,1859,oil,29.5,National Gallery of Canada,8,1957,Ottawa,,yes,,45.425533,-75.692482,500,museum
+132_02,The Salutation of Beatrice,1850,pen and ink,14,George Rae,1,1850, Birkenhead,,,yes,53.390409,-3.032817,1,stockbroker
+132_02,The Salutation of Beatrice,1850,pen and ink,14,Viscount Leverhulme,2,1917,Merseyside,,,yes,53.3522,-2.9799,1,manufacturer
+132_02,The Salutation of Beatrice,1850,pen and ink,14,Anderson Galleries,3,1926,New York,,yes,,40.73061,-73.935242,1,dealer
+132_02,The Salutation of Beatrice,1850,pen and ink,14,Scott and Fowles,4,1926,New York,,yes,,40.7127837,-74.0059413,1,lawyer
+132_02,The Salutation of Beatrice,1850,pen and ink,14,Grenville Winthrop,5,1927,New York,,yes,,40.7127837,-74.0059413,1,lawyer
+132_02,The Salutation of Beatrice,1850,pen and ink,14,Fogg Museum,6,1943,"Cambridge, MA",,yes,,42.3736158,-71.1097335,0,museum
+132_03,The Salutation of Beatrice,1849,pen brown ink,5 7/8,W M Rossetti,1,1849,London,yes,,,51.54847813,-0.03073457,1,writer
+132_03,The Salutation of Beatrice,1849,pen brown ink,5 7/8,Charles Fairfax Murray,2,1903,London,yes,,,51.60453756,0.06122559,1,dealer
+132_03,The Salutation of Beatrice,1849,pen brown ink,5 7/8,Birmingham Museum,3,1903,Birmingham,,,yes,52.48015,-1.903612,0,museum
+132_04,The Salutation of Beatrice,1882,oil,60 3/4,Frederick Leyland,1,1882,Liverpool,,,yes,53.38837508,-2.92035654,1,shipping
+132_04,The Salutation of Beatrice,1882,oil,60 3/4,Christies,2,1892,London,yes,,,51.57742746,-0.029682,0,auction house
+132_04,The Salutation of Beatrice,1882,oil,60 3/4,Sir John Holder,3,1892,Pitmaston Worcester,,,yes,52.18935,-2.22001,560,manufacturer
+132_04,The Salutation of Beatrice,1882,oil,60 3/4,Mrs I M S Holder,4,1923,Pitmaston Worcester,,,yes,52.18935,-2.22001,0,descendant
+132_04,The Salutation of Beatrice,1882,oil,60 3/4,Fund of Edward Drummond Libbey,5,1925,Toledo,,yes,,41.651031,-83.541939,1,manufacturer
+132_04,The Salutation of Beatrice,1882,oil,60 3/4,Toledo Museum of Art,6,1960,Toledo,,yes,,41.6639383,-83.555212,0,museum

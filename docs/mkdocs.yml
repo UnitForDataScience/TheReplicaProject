@@ -1,0 +1,7 @@
+site_name: The Replica Project
+theme: readthedocs
+
+nav:
+ - 'Welcome': 'index.md'
+ - 'Back End': 'Backend.md'
+ - 'Front End': 'Frontend.md'

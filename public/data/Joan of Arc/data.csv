@@ -1,0 +1,28 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+116_01,Joan of Arc ,1863,oil,28,James Anderson Rose,1,1863,London,yes,,,51.58409392,-0.02633845,1,lawyer
+116_01,Joan of Arc ,1863,oil,24,Christies,2,1867,London,yes,,,51.57742746,-0.029682,0,auction house
+116_01,Joan of Arc ,1863,oil,24,John Charles Potter,3,1867,London,yes,,,,,94.1,manufacturer
+116_01,Joan of Arc ,1863,oil,28,Samuel T Peters,4,1867,New York,,yes,,40.73061,-73.935242,94.1,industrialist
+116_01,Joan of Arc,1863,oil,28,Mrs Charles B Scully,5,1987,New York,,yes,,40.758896,-73.98513,0,descendant
+116_01,Joan of Arc ,1863,oil,24,Agnew,6,1984,London,yes,,,51.57742746,-0.029682,0,auction house
+116_01,Joan of Arc,1863,oil,24,The Piccadilly Gallery,7,1990,London,yes,,,51.50542556,-0.02968188,1,dealer
+116_01,Joan of Arc ,1863,oil,24,musee d art modern et contemporain,8,1996,Strasbourg,,yes,,48.58392,7.74553,0,museum
+116_02,Joan of Arc ,1864,w/c,20.25,Ellen Heaton,1,1864,London,yes,,,51.38237313,-0.06054314,105,collector
+116_02,Joan of Arc ,1864,w/c,20.25,Beresford Heaton,2,1894,London,yes,,,51.48201585,-0.21163928,0,lawyer
+116_02,Joan of Arc ,1864,w/c,20.25,Tate Museum,3,1940,London,yes,,,51.49098900,-0.12665100,0,museum
+116_03,Joan of Arc ,1864,w/c,12,Lady Ashburton,1,1864,London,yes,,,51.60976625,0.00942128,1,collector
+116_03,Joan of Arc ,1864,w/c,12,Hon Spencer Loch,2,1920,Edinburgh,,,yes,55.953251,-3.188267,0,descendant
+116_03,Joan of Arc ,1864,w/c,12,Christies,3,1973,London,yes,,,51.57742746,-0.029682,0,auction house
+116_03,Joan of Arc ,1864,w/c,12,Agnew,4,1973,London,yes,,,51.50670000,-0.12700000,6825,collector
+116_03,Joan of Arc ,1864,w/c,12,Christies,5,1999,London,yes,,,51.57742746,-0.029682,0,auction house
+116_03,Joan of Arc ,1864,w/c,12,Private collection,6,1999,London,yes,,,51.57742746,-0.029682,"260,000",collector
+116_03,Joan of Arc ,1864,w/c,12,Sothebys,7,2012,London,yes,,,51.54624657,-0.16545449,bought in,auction house
+116_03,Joan of Arc ,1864,w/c,12,Christies,8,2014,London,yes,,,51.57742746,-0.029682,0,auction house
+116_03,Joan of Arc ,1864,w/c,12,Private collection,9,2014,Off coast,,,yes,52.54535600,2.26043700,"218,500",unknown
+116_04,Joan of Arc ,1882,oil,20.5,Christies,1,1883,London,yes,,,51.57742746,-0.029682,bought in,auction house
+116_04,Joan of Arc  ,1882,oil,20.5,Leonard Valpy,2,1883,London,yes,,,51.56750849,-0.09254522,367.1,lawyer
+116_04,Joan of Arc ,1882,oil,20.5,Christies,3,1888,London,yes,,,51.57742746,-0.029682,0,auction house
+116_04,Joan of Arc  ,1882,oil,20.5,Frederick Startridge Ellis,2,1888,London,yes,,,51.4652515,-0.14786539,94.1,publisher
+116_04,Joan of Arc ,1882,oil,20.5,Agnew,3,1899,London,yes,,,51.50670000,-0.12700000,1,dealer
+116_04,Joan of Arc ,1882,oil,20.5,Charles Fairfax Murray,4,1900,London,yes,,,51.60453756,0.06122559,1,dealer
+116_04,Joan of Arc  ,1882,oil,20.5,Fitzwilliam Museum,5,1909,Cambridge,,,yes,52.20461300,-0.12027300,0,museum

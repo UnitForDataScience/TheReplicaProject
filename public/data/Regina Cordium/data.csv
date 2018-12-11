@@ -1,0 +1,29 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+128_01,Regina Cordium,1860,black & red chalk,7.75,Val Prinsep,1,1860,London,yes,,,51.58703101,-0.20566471,1,artist
+128_01,Regina Cordium,1860,black & red chalk,7.75,Capt Charles Edgar Loseby,2,1912,Leicester,,,yes,52.6368778,-1.1397592,1,politician
+128_01,Regina Cordium,1860,black & red chalk,7.75,Sothebys,3,1946,London,yes,,,51.54624657,-0.16545449,0,auction house
+128_01,Regina Cordium,1860,black & red chalk,7.75,Kerrison Preston,4,1946,Bournemouth,,,yes,50.720806,-1.904755,1,lawyer
+128_01,Regina Cordium,1860,black & red chalk,7.75,Sothebys,5,1974,London,yes,,,51.54624657,-0.16545449,0,auction house
+128_01,Regina Cordium,1860,black & red chalk,7.75,Private collection,6,1974,Off coast,,,yes,52.50049,1.803303,1,collector
+128_01,Regina Cordium,1860,black & red chalk,7.75,Leicester Galleries,7,1988,London,yes,,,51.63811008,-0.18586368,1,gallery
+128_01,Regina Cordium,1860,black & red chalk,7.75,Private collection,8,1989,Off coast,,,yes,52.501117,1.789227,1,collector
+128_02,Regina Cordium,1860,oil on panel,10,John Miller,1,1860,Liverpool,,,yes,53.42711956,-3.20627274,25,merchant
+128_02,Regina Cordium,1860,oil on panel,10,John Ruskin,2,1865,London,yes,,,51.4670893,-0.01322139,1,writer
+128_02,Regina Cordium,1860,oil on panel,10,Arthur Severn,3,1900,London,yes,,,51.48222125,-0.35559364,0, artist
+128_02,Regina Cordium,1860,oil on panel,10,Sir Sigismund Neumann,4,1911,London,yes,,,51.36328456,-0.14490148,1,financier
+128_02,Regina Cordium,1860,oil on panel,10,Johannesburg Art Gallery,5,1912,"Johannesburg, SA",,yes,,-26.2041028,28.0473051,0,museum
+128_03,Regina Cordium,1861,oil on panel,10.75,Aldam and Ellen Heaton,1,1861,London,yes,,,51.38237313,-0.06054314,1,manufacturer
+128_03,Regina Cordium,1861,oil on panel,10.75,Winifred Heaton Pawling,2,1923,London,yes,,,51.43908976,0.07539176,0,descendant
+128_03,Regina Cordium,1861,oil on panel,10.75,Claude Heaton Pawling,3,1929,London,yes,,,51.56769193,-0.06648392,0,descendant
+128_03,Regina Cordium,1861,oil on panel,10.75,Mrs L D Jackson,4,1971,London,yes,,,51.49650767,-0.00761719,0,descendant
+128_03,Regina Cordium,1861,oil on panel,10.75,Christies,5,1981,London,yes,,,51.57742746,-0.029682,0,auction house
+128_03,Regina Cordium,1861,oil on panel,10.75,Christies,6,1982,London,yes,,,51.57742746,-0.029682,0,auction house
+128_03,Regina Cordium,1861,oil on panel,10.75,Forbes Collection,7,1982,London,yes,,,52.487321,1.828022,"11,000",collector
+128_03,Regina Cordium,1861,oil on panel,10.75,Christies,8,2003,London,yes,,,52.487321,1.828022,bought in,auction house
+128_03,Regina Cordium,1861,oil on panel,10.75,Lyon and Turnbull ,9,2011,Edinburgh,,,yes,55.953251,‎-3.188267,bought in,auction house
+128_04,Regina Cordium,1866,oil,23.5,John Hamilton Trist,1,1866,Brighton,,,yes,50.82253,-0.137163,170,merchant
+128_04,Regina Cordium,1866,oil,23.5,Christies,2,1892,London,yes,,,51.57742746,-0.029682,0,auction house
+128_04,Regina Cordium,1866,oil,23.5,Herbert Hardwick Trist,3,1892,Brighton,,,yes,50.8429,-0.1313,23,merchant
+128_04,Regina Cordium,1866,oil,23.5,Christies,4,1937,London,yes,,,51.57742746,-0.029682,0,auction house
+128_04,Regina Cordium,1866,oil,23.5,Barbizon House,5,1937,London,yes,,,51.58802255,-0.10194958,50.8,dealer
+128_04,Regina Cordium,1866,oil,23.5,Kelvingrove Art Gallery and Museum,6,1941,Glasgow,,,yes,55.8642,-4.2518,125,museum

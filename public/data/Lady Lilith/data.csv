@@ -1,0 +1,33 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+117_01,Lady Lilith  ,1866,crayon,24,Frederick Startridge Ellis,1,1866,London,yes,,,51.4652515,-0.14786539,472.1,publisher
+117_01,Lady Lilith   ,1866,crayon,24,Agnew,2,1900,London,yes,,,51.5067,-0.127,1,dealer
+117_01,Lady Lilith   ,1866,crayon,24,Israeli Art Museum,3,1955,Tel Aviv,,yes,,32.08088,34.78057,1,museum
+117_02,Lady Lilith ,1867,crayon,37,Fanny Cornforth,1,1867,London,yes,,,51.5893832,-0.20427581,0,model
+117_02,Lady Lilith ,1867,crayon,37,John Hamilton Trist,2,1882,Brighton,,,yes,50.8429,-0.1313,100,merchant
+117_02,Lady Lilith ,1867,crayon,37,Christies,3,1892,London,yes,,,51.57742746,-0.029682,100,auction house
+117_02,Lady Lilith ,1867,crayon,37,Herbert Hardwick Trist,4,1892,Brighton,,,yes,50.82253,-0.137163,63,descendant
+117_02,Lady Lilith ,1867,crayon,37,Mrs Trist,5,1936,Brighton,,,yes,50.82253,-0.137163,1,descendant
+117_02,Lady Lilith ,1867,crayon,37,Christies,6,1937,London,yes,,,51.57742746,-0.029682,0,auction house
+117_02,Lady Lilith  ,1867,crayon,37,Banks,7,1937,Off coast,,,,52.547731,1.923294,33.12,collector
+117_02,Lady Lilith,1867,crayon,37,Thomas Edward Hanley,8,1965,Philadelphia,,yes,,39.952583,-75.165222,1,manufacturer
+117_02,Lady Lilith ,1867,crayon,37,Harry Ransom Center,9,1965,"Austin, TX",,yes,,30.2669444,-97.7427778,0,museum
+117_03,Lady Lilith ,1867,red and black chalk,38,Lucy Rossetti,1,1882,London,yes,,,51.54847813,-0.03073457,0,artist
+117_03,Lady Lilith,1867,red and black chalk,38,E H Leggatt,2,1898,London,yes,,,51.55506239,-0.06107661,1,dealer
+117_03,Lady Lilith ,1867,red and black chalk,38,Reginald Vaile,3,1898,London,yes,,,51.46637767,-0.09606268,1,collector
+117_03,Lady Lilith  ,1867,red and black chalk,38,Dowdeswell Gallery,4,1903,London,yes,,,51.55050389,-0.09492678,53.1,gallery
+117_03,Lady Lilith  ,1867,red and black chalk,38,Anne and Anthony DOffay,5,1968,London,yes,,,51.58365456,-0.28998255,42,dealer
+117_03,Lady Lilith,1867,red and black chalk,38,Private collection,6,1975,London,yes,,,51.38392546,-0.04762393,1,collector
+117_04,Lady Lilith ,1867,w/c,20.1875,William Coltart,1,1867,Liverpool,,,yes,53.50699337,-3.09028688,1,merchant
+117_04,Lady Lilith ,1867,w/c,20.1875,R E Tatham,2,1903,London,yes,,,51.40061386,-0.00472118,1,collector
+117_04,Lady Lilith ,1867,w/c,20.1875,Agnew,3,1908,London,yes,,,51.5067,-0.127,441,dealer
+117_04,Lady Lilith ,1867,w/c,20.1875,Metropolitan Museum of Art ,4,1908,New York,,yes,,40.73061,-73.935242,,museum
+117_05,Lady Lilith,1867,w/c,20.5,Alexander Shannan Stevenson,1,1867,Tynemouth,,,yes,55.0179,-1.42554202,150,manufacturer
+117_05,Lady Lilith,1867,w/c,20.5,Nancy Stevenson Thompson,2,1900,Tynemouth,,,yes,55.0179,-1.42558,0,descendant
+117_05,Lady Lilith,1867,w/c,20.5,Sothebys,3,1988,London,yes,,,51.54624657,-0.16545449,0,auction house
+117_05,Lady Lilith,1867,w/c,20.5,Tomonori Iwakura,4,1988,Tokyo,,yes,,35.652832,139.839478,105000,merchant
+117_05,Lady Lilith,1867,w/c,20.5,Sothebys,5,2017,London,,,,51.54624657,-0.16545449,"680,750",auction house
+117_05,Lady Lilith,1867,w/c,20.5,Private collection,6,2017,London,,yes,,51.4228708,-0.19489433,560000,merchant
+117_06,Lady Lilith ,1868-73,oil,37.5,Frederick Leyland,1,1868,Liverpool,,,yes,53.38837508,-2.92035654,472.1,shipping
+117_06,Lady Lilith ,1868-73,oil,37.5,Christies,2,1892,London,yes,,,51.57742746,-0.029682,0,auction house
+117_06,Lady Lilith,1868-73,oil,37.5,Samuel Bancroft,3,1892,Wilmington DE,,yes,,39.735226,-75.529289,525,banker
+117_06,Lady Lilith, 1868-73,oil,37.5,Delaware Art Museum,4,1935,Wilmington DE,,yes,,39.7458333,-75.5469444,0,museum

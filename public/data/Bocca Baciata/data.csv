@@ -1,0 +1,16 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+105_01,Bocca Baciata   ,1859,oil,13.25,George Boyce,1,1859,London,yes,,,51.39793211,0.01295516,1,artist
+105_01,Bocca Baciata  ,1859,oil,13.25,Christies,2,1897,London,yes,,,51.57742746,-0.029682,0,auction house
+105_01,Bocca Baciata  ,1859,oil,13.25,Charles Fairfax Murray and Agnew,3,1897,London,yes,,,51.60453756,0.06122559,315,dealer
+105_01,Bocca Baciata  ,1859,oil,13.25,Charles Fairfax Murray,4,1897,London,yes,,,51.60453756,0.06122559,315,dealer
+105_01,Bocca Baciata   ,1859,oil,13.25,Mrs Edward Brandegee Mary Pratt,5,1906,Boston,,yes,,42.364506,-71.038887,378,collector
+105_01,Bocca Baciata  ,1859,oil,13.25,Martina Lawrence,6,1956,Boston,,yes,,42.361145,-71.057083,0,descendant
+105_01,Bocca Baciata   ,1859,oil,13.25,James Lawrence,7,1959,Boston,,yes,,42.359968,-71.060093,0,descendant
+105_01,Bocca Baciata   ,1859,oil,13.25,Boston Museum of Fine Arts,8,1980,Boston,,yes,,42.3583333,-71.0602778,0,museum
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,Sir William Bowman,1,1868,London,yes,,,51.43176595,0.03523974,157.5,surgeon
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,Sothebys,2,1953,London,yes,,,52.187248,0.97078,0,auction house
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,William Alwyn,3,1953,Suffolk ,,,yes,52.187248,0.97078,105,composer
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,Sothebys,4,1962,London,yes,,,52.187248,0.97078,0,auction house
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,Leger Galleries,5,1962,London,yes,,,51.44444185,-0.26402259,150,gallery
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,James Coats Gallery,6,1964,New York,,yes,,40.748817,-73.985428,1,dealer
+105_02,La Bionda del Balcone ,1868-77,w/c,17.75,Rochester Gallery,7,1966,Rochester,,yes,,43.16103,-77.610924,0,museum

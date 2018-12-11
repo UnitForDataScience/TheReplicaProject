@@ -1,0 +1,21 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+115_01,How They Met Themselves,1860,ink,10.5,George Boyce,1,1860,London,yes,,,51.39793211,0.01295516,1,artist
+115_01,How They Met Themselves,1860,ink,10.5,Christies,2,1897,London,yes,,,51.57742746,-0.029682,0,auction house
+115_01,How They Met Themselves,1860,ink,10.5,Laurence W Hodson,3,1897,Wolverhamption,,,yes,52.58697,-2.12882,40.19,manufacturer
+115_01,How They Met Themselves,1860,ink,10.5,Christies,4,1906,London,yes,,,51.57742746,-0.029682,0,auction house
+115_01,How They Met Themselves,1860,ink,10.5,Charles Fairfax Murray,5,1906,London,yes,,,51.60453756,0.06122559,168,dealer
+115_01,How They Met Themselves,1860,ink,10.5,James Richardson Holliday,6,1906,Birmingham,,,yes,52.48142,-1.89983,184.16,lawyer
+115_01,How They Met Themselves,1860,ink,10.5,Fitzwilliam Museum,7,1927,Cambridge,,,yes,52.204613,-0.120273,0,museum
+115_02,How They Met Themselves,1860,w/c,13.375,James Anderson Rose,1,1860,London,yes,,,51.58409392,-0.02633845,1,lawyer
+115_02,How They Met Themselves,1860,w/c,13.375,Christies,2,1867,London,yes,,,51.57742746,-0.029682,bought in,auction house
+115_02,How They Met Themselves,1860,w/c,13.375,Christies,3,1891,London,yes,,,51.57742746,-0.029682,0,auction house
+115_02,How They Met Themselves,1860,w/c,13.375,Charles Fairfax Murray,4,1891,London,yes,,,51.60453756,0.06122559,31.1,dealer
+115_02,How They Met Themselves,1860,w/c,13.375,Private collection,5,1897,California,,yes,,34.052235,-118.243683,1,collector
+115_02,How They Met Themselves,1860,w/c,13.375,Leicester Galleries,6,1920,London,yes,,,51.38392546,-0.04762393,1,dealer
+115_02,How They Met Themselves,1860,w/c,13.375,Fitzwilliam Museum,7,1937,Cambridge,,,yes,52.204613,-0.120273,200,museum
+115_03,How They Met Themselves,1864,w/c,11,William Graham,1,1864,Glasgow,,,yes,55.864237,-4.251806,1,politician
+115_03,How They Met Themselves,1860,w/c,11,Christies,2,1886,London,yes,,,51.57742746,-0.029682,0,auction house
+115_03,How They Met Themselves,1864,w/c,11,Robert H Benson,3,1886,London,yes,,,51.38298334,-0.23158505,105,writer
+115_03,How They Met Themselves,1864,w/c,11,S Pepys Cockerell,4,1929,London,yes,,,51.37409769,-0.09822425,1,artist
+115_03,How They Met Themselves,1864,w/c,11,E W Huddart,5,1962,London,yes,,,51.45004508,-0.25275902,1,descendant
+115_03,How They Met Themselves,1864,w/c,11,Andrew Lloyd Webber,6,1996,London,yes,,,51.44777901,-0.26173473,1,composer

@@ -1,0 +1,39 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+141_01,Venus Verticordia ,1863,red chalk,30.5,William Graham,1,1872,Glasgow,,,yes,55.864237,-4.251806,100,politician
+141_01,Venus Verticordia ,1863,red chalk,30.5,Christies,2,1886,London,yes,,,51.57742746,-0.029682,0,auction house
+141_01,Venus Verticordia ,1863,red chalk,30.5,Lord Faringdon,3,1886,Berkshire,,,yes,51.668497326,-1.651830726,130,politician
+141_01,Venus Verticordia ,1863,red chalk,30.5,Buscot Park Berkshire,4,1934, Berkshire,,,yes,51.67195,-1.64943,0,museum
+141_02,Venus Verticordia ,1868,oil,30.625,John Mitchell ,1,1868,Bradford,,,yes,53.796,-1.7594,1,merchant
+141_02,Venus Verticordia ,1868,oil,30.625,John Graham,2,1870, Ayrshire,,,yes,55.852,-4.8847,577.1,merchant
+141_02,Venus Verticordia ,1868,oil,30.625,William Vokins,3,1887,London,Yes,,,51.61182262,-0.14638215,0,dealer
+141_02,Venus Verticordia ,1868,oil,30.625,Christies,4,1887,London,Yes,,,51.57742746,-0.029682,0,auction house
+141_02,Venus Verticordia ,1868,oil,30.625,Arthur Anderson,5,1887,Off coast,,,yes,52.535333,2.469177,472.1,collector
+141_02,Venus Verticordia ,1868,oil,30.625,Christies,6,1894,London,Yes,,,51.57742746,-0.029682,0,auction house
+141_02,Venus Verticordia ,1868,oil,30.625,H S Sanders Clark,7,1894,Cardiff,,,yes,51.48158300,-3.17909,525,shipping
+141_02,Venus Verticordia ,1868,oil,30.625,Christies,8,1936,London,Yes,,,51.57742746,-0.029682,0,auction house
+141_02,Venus Verticordia ,1868,oil,30.625,E Percival Allam,9,1936,Essex,,,yes,51.765907,-0.667367,105,engineer
+141_02,Venus Verticordia ,1868,oil,30.625,Russell Cotes Art Gallery,10,1946,Bournemouth,,,yes,50.720806,-1.904755,367.5,museum
+141_03,Venus Verticordia ,1864,w/c,14.25,George Rae,1,1883, Birkenhead,,,yes,53.39040900,-3.032817,105,stockbroker
+141_03,Venus Verticordia ,1864,w/c,14.25,Viscount Leverhulme,2,1890,Merseyside,,,yes,53.3522,-2.9799,1,manufacturer
+141_03,Venus Verticordia ,1864,w/c,14.25,Viscount Leverhulme 2,3,1900,Merseyside,,,yes,53.355,-2.9943,1,descendant
+141_04,Venus Verticordia ,1867,red chalk,30.25,Frederick Leyland,1,1867,Liverpool,,,yes,53.38837508,-2.92035654,1,shipping
+141_04,Venus Verticordia ,1867,red chalk,30.25,Christies,2,1892,London,yes,,,51.57742746,-0.029682,0,auction house
+141_04,Venus Verticordia ,1867,red chalk,30.25,John Bibby,3,1892,Liverpool,,,yes,53.53261481,-3.09980356,126,shipping
+141_04,Venus Verticordia ,1867,red chalk,30.25,Christies,4,1899,London,yes,,,51.57742746,-0.029682,0,auction house
+141_04,Venus Verticordia ,1867,red chalk,30.25,Major Charles Sydney Goldman,5,1899,Falmouth,,,yes,50.15257099,-5.06627,294,politician
+141_04,Venus Verticordia ,1867,red chalk,30.25,Commander Victor Robert Penryn Monck (Goldman son),6,1958,Isle of Wight,,,yes,50.69271759,-1.3167103,0,descendant
+141_04,Venus Verticordia ,1867,red chalk,30.25,Sothebys,7,1981,London,yes,,,51.54624657,-0.16545449,0,auction house
+141_04,Venus Verticordia ,1867,red chalk,30.25,Private collection,8,1981,Off coast,,,yes,52.38853,2.211985,1,collector
+141_04,Venus Verticordia ,1867,red chalk,30.25,Sothebys,9,1989,London,yes,,,51.54624657,-0.16545449,0,auction house
+141_04,Venus Verticordia ,1867,red chalk,30.25,Private collection,10,1989,Off coast,,,yes,52.38853,2.211985,1,collector
+141_04,Venus Verticordia ,1867,red chalk,30.25,Christies,11,1997,London,Yes,,,51.57742746,-0.029682,0,auction house
+141_04,Venus Verticordia ,1867,red chalk,30.25,Private collection,12,1997,Off coast,,,yes,52.38853,2.211985,"120,000",collector
+141_05,Venus Verticordia ,1868,w/c,26.5,William Graham,1,1868,Glasgow,,,yes,55.86423700,-4.25180600,300,politician
+141_05,Venus Verticordia ,1868,w/c,26.5,Christies,2,1886,London,yes,,,51.57742746,-0.029682,0,auction house
+141_05,Venus Verticordia ,1868,w/c,26.5,Agnew,3,1886,London,yes,,,51.50670000,-0.12700000,325.1,dealer
+141_05,Venus Verticordia ,1868,w/c,26.5,Amy Graham Muir Mackenzie,4,1886,London,yes,,,51.52904783,-0.32961582,325.5,descendant
+141_05,Venus Verticordia ,1868,w/c,26.5,Dorothea Muir Mackenzie Hambourg,5,1900,London,yes,,,51.58142398,-0.0506196,0,descendant
+141_05,Venus Verticordia ,1868,w/c,26.5,Stone Gallery David Hughes,6,1966,Newcastle,,,yes,54.97328,-1.61396,1,dealer
+141_05,Venus Verticordia ,1868,w/c,26.5,Private collection,7,1966,Off coast,,,yes,52.48853,2.221985,1,collector
+141_05,Venus Verticordia ,1868,w/c,26.5,Sothebys,8,2014,London,Yes,,,51.54624657,-0.16545449,0,auction house
+141_05,Venus Verticordia ,1868,w/c,26.5,Private collection,9,2014,Off coast,,,yes,52.491874,2.320862,"2,882,500",collector

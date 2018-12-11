@@ -1,0 +1,33 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+101_01,Beata Beatrix ,1864,oil,34,William Cowper Temple Baron Mount Temple,1,1870,Broadlands: Hampshire,,,yes,51.28734919,-0.7373875,315,politician
+101_01,Beata Beatrix ,1864,oil,34,Tate Museum,2,1889,London,yes,,,51.490989,-0.126651,0,museum
+101_02,Beata Beatrix,1869,Red: brown: and white chalks on cream paper,33.12,William Graham,1,1869,Glasgow,,,yes,55.864237,-4.251806,0,politician
+101_02,Beata Beatrix,1869,Red: brown: and white chalks on cream paper,33.12,Christies,2,1886,London ,yes,,,51.57742746,-0.029682,215,auction house
+101_02,Beata Beatrix,1869,Red: brown: and white chalks on cream paper,33.12,Robert Harrison,3,1886,Oxfordshire,,,yes,51.535764,-0.902894,215,politician
+101_02,Beata Beatrix ,1869,Red: brown: and white chalks on cream paper,33.12,Grenville Winthrop,4,1924,New York,,yes,,40.7127837,-74.0059413,1,lawyer
+101_02,Beata Beatrix ,1869,Red: brown: and white chalks on cream paper,33.12,Fogg Museum,5,1943,Cambridge: MA ,,yes,,42.3736158,-71.1097335,0,museum
+101_03,Beata Beatrix,1871,w/c,28.06,Frederick Craven,1,1871,Manchester,,,yes,53.4807593,-2.2426305,350,manufacturer
+101_03,Beata Beatrix,1871,w/c,28,Christies,2,1895,London,yes,,,51.57742746,-0.029682,0,auction house
+101_03,Beata Beatrix,1871,w/c,28.06,Major Charles Vipan,3,1895,Bedfordshire,,,yes,51.962855,-0.49252799,173,military
+101_03,Beata Beatrix ,1871,w/c,28.06,Mary Frances Vipan,4,1921,Hastings,,,yes,50.854259,-0.57345299,0,descendant
+101_03,Beata Beatrix ,1871,w/c,28.06,Henry Beecham,5,1925,Lancashire,,,yes,53.4562501,-2.7508278,346.1,lawyer
+101_03,Beata Beatrix ,1871,w/c,28.06,Grenville Winthrop,6,1935,New York,,yes,,40.7127837,-74.0059413,0,lawyer
+101_03,Beata Beatrix,1871,w/c,28.06,Fogg Museum,7,1943,Cambridge: MA,,yes,,42.3736158,-71.1097335,0,museum
+101_04,Beata Beatrix ,1872,oil,60.94,William Graham,1,1872,Glasgow,,,yes,55.864237,-4.251806,1115,politician
+101_04,Beata Beatrix ,1872,oil,61,Christies,2,1886,London,yes,,,51.57742746,-0.029682,0,auction house
+101_04,Beata Beatrix ,1872,oil,60.94,Charles Hutchinson,3,1886,Chicago,,yes,,41.83486985,-87.45917561,1207,merchant
+101_04,Beata Beatrix,1872,oil,60.94,Art Institute of Chicago,4,1925,Chicago,,yes,,41.8781136,-87.62979819,0,museum
+101_05,Beata Beatrix ,1872,chalk,28,Leonard Valpy,1,1872,London,yes,,,51.56750849,-0.09254522,0,lawyer
+101_05,Beata Beatrix ,1872,chalk,34,Christies,2,1888,London,yes,,,51.57742746,-0.029682,210,auction house
+101_05,Beata Beatrix ,1872,chalk,28,John Bibby,3,1888,Liverpool,,,yes,53.53261481,-3.09980356,210,shipping
+101_05,Beata Beatrix ,1872,chalk,34,Christies,4,1899,London,yes,,,53.53261481,-3.09980356,0,auction house
+101_05,Beata Beatrix ,1872,chalk,28,Major Charles Sydney Goldman,5,1899,Falmouth,,,yes,50.15257099,-5.06627,105,politician
+101_05,Beata Beatrix ,1872,chalk,28,Commander Victor Robert Penryn Monck (Goldman son),6,1948,Isle of Wight,,,yes,50.692718,-1.31671,0,descendant
+101_05,Beata Beatrix,1872,chalk,34,Sothebys,7,1989,London,yes,,,51.54624657,-0.16545449,0,auction house
+101_05,Beata Beatrix ,1872,chalk,28,Private Collection,8,1989,Off coast,,,yes,52.48853,1.805792,220000,collector
+101_06,Beata Beatrix ,1877,oil,25.5,Lucy Rossetti,1,1877,London,yes,,,51.54847813,-0.03073457,0,artist
+101_06,Beata Beatrix ,1877,oil,25.5,Birmingham Museum,2,1891,Birmingham,,,yes,52.48015,-1.903612,0,museum
+101_07,Beata Beatrix,1880,oil,25.75,Leonard Valpy,1,1880,London,yes,,,51.56750849,-0.09254522,290,lawyer
+101_07,Beata Beatrix ,1880,oil,25.75,Percy Wyndham,2,1883,Wiltshire,,,yes,51.072333,-2.17221199,661.1,politician
+101_07,Beata Beatrix ,1880,oil,25.75,A E Anderson,3,1900,London,yes,,,51.40781211,-0.25964961,1,lawyer
+101_07,Beata Beatrix ,1880,oil,25.75,National Gallery of Scotland,4,1928,Edinburgh,,,yes,55.953252,-3.18826699,0,museum

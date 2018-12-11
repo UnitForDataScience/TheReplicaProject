@@ -1,0 +1,19 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+123_01,Mary Magdalene at the Door of Simon Pharisee ,1858,pen & India ink,21.25,Thomas Plint,1,1859,Leeds,,,yes,53.7997,-1.5492,55,stockbroker
+123_01,Mary Magdalene at the Door of Simon Pharisee ,1858,pen & India ink,21.25,Chas Ricketts C Shannon,2,1898,London,yes,,,51.51574247,0.06543018,150,artist
+123_01,Mary Magdalene at the Door of Simon Pharisee ,1858,pen & India ink,21.25,Fitzwilliam Museum,3,1937,Cambridge,,,yes,52.204613,-0.120273,0,museum
+123_02,Mary Magdalene at the Door of Simon Pharisee ,1858,Brown pen and ink with wash,9.25,Fanny Cornforth,1,1858,London,yes,,,51.5893832,-0.20427581,0,model
+123_02,Mary Magdalene at the Door of Simon Pharisee ,1858,Brown pen and ink with wash,9.25,Charles Fairfax Murray,2,1909,London,yes,,,51.60453756,0.06122559,0,dealer
+123_02,Mary Magdalene at the Door of Simon Pharisee ,1858,Brown pen and ink with wash,9.25,Birmingham Museum,3,1903,Birmingham,,,yes,52.48015,-1.903612,0,museum
+123_03,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24.25,Gertrude Countess of Pembroke,1,1866, Hertfordshire,,,yes,51.9015,-0.0506,1,collector
+123_03,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24.25,Lord Arthur Ponsonby,2,1906,West Sussex,,,yes,51.0616776,-0.7509381,0,descendant
+123_04,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24,H T Clabburn,1,1865,Norwich,,,yes,52.6309,1.29834,1,manufacturer
+123_04,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24,Charles Fairfax Murray,2,1872,London,yes,,,51.60453756,0.06122559,1,dealer
+123_04,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24,C A Howell,3,1872,London,yes,,,51.51373093,-0.00811984,1,dealer
+123_04,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24,Aldam Heaton,4,1872,London,yes,,,51.38237313,-0.06054314,220,writer
+123_04,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24,Mr Laurie,5,1876,Glasgow,,,yes,55.865101,-4.433177,1,dealer
+123_04,Mary Magdalene at the Door of Simon Pharisee ,1865,oil,24,Jarvis Keir,6,1882,Off coast,,,yes,52.511807,1.862869,1,unknown
+123_05,Mary Magdalene at the Door of Simon Pharisee ,1870,black chalk,32,Fanny Cornforth,1,1870,London,yes,,,51.5893832,-0.20427581,0,model
+123_05,Mary Magdalene at the Door of Simon Pharisee ,1870,black chalk,32,Lord Battersea,2,1897,London,yes,,,51.58945055,-0.00257238,1,politician
+123_05,Mary Magdalene at the Door of Simon Pharisee ,1870,black chalk,32,Charles Fairfax Murray,3,1900,London,yes,,,51.60453756,0.06122559,1,dealer
+123_05,Mary Magdalene at the Door of Simon Pharisee ,1870,black chalk,32,Birmingham Museum,4,1904,Birmingham,,,yes,52.48015,-1.903612,0,museum

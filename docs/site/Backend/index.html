@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Back End - The Replica Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Back End";
+    var mkdocs_page_input_path = "Backend.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Replica Project</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Back End</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#backend">Backend</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#allsocialnetworkphp">allSocialNetwork.php</a></li>
+        
+            <li><a class="toctree-l3" href="#commonsphp">commons.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getcomparisonnetworkphp">getComparisonNetwork.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getpaintingimagesphp">getPaintingImages.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getpaintingsphp">getPaintings.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getrawdataphp">getRawData.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getreplicainfophp">getReplicaInfo.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getreplicanamesphp">getReplicaNames.php</a></li>
+        
+            <li><a class="toctree-l3" href="#getsocialnetworkdataphp">getSocialNetworkData.php</a></li>
+        
+            <li><a class="toctree-l3" href="#chord_diagramphp">chord_diagram.php</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Frontend/">Front End</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Replica Project</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Back End</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="backend">Backend</h2>
+<p>In this section all the REST PHP files will be explained. We assume prior knowledge of PHP here on. </p>
+<h4 id="allsocialnetworkphp">allSocialNetwork.php</h4>
+<p>This API helps in getting the Transactional Network for all the paintings.</p>
+<p><strong>Requires</strong> </p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong> Params: Get </strong></p>
+<ul>
+<li>start: year from which the network should be created</li>
+<li>end: year till which the network should be created</li>
+</ul>
+<p><strong> Algorithm: </strong></p>
+<p>This file starts with looping over every painting name in <code>&lt;code&gt;/public/data</code> and reading the data.csv file which currently acts like a database for the painting. This file contains information of Replica being transferred to many different owners. First a variable <code>$dataCreation</code> is intitilized which has a key <code>element</code>. The purpose of this is to store the previous elements which have been read. This helps in tracking the parent node from whom the painting was transfered. </p>
+<p>The algorithm for every row works in this fashion:-</p>
+<ul>
+<li>If the node has a parent node create a transactions information with source and target and if not then do nothing.</li>
+<li>Updates the In-Nodes(Buying Paintings) and Out-Nodes(Selling Paintings). In-Nodes for the person who is taking the painting and out-node for person who is giving the painting.</li>
+<li>Insert the element in <code>$dataCreation</code></li>
+</ul>
+<p>The whole algorithm depends of HashMap and names being unique. If the names are not unique then alterations to algorithms would be required.</p>
+<h4 id="commonsphp">commons.php</h4>
+<p>This Library is used by all REST scripts. Basically this provides function to output data in json format.</p>
+<h4 id="getcomparisonnetworkphp">getComparisonNetwork.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>name: Name of the Painting</li>
+</ul>
+<p><strong> Algorithm: </strong> </p>
+<p>This REST script is very easy to understand. It takes the the name of the painting and reads the data.csv of that painting. For every row it inserts a record in the output array which has <code>[Replica ID, [Array of information required]]</code>. If you would have to change anything it will probably in <code>[Array of information Required]</code>. Please don't change the order, if you want to add more content just append to that array.</p>
+<h4 id="getpaintingimagesphp">getPaintingImages.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>name: Name of the Painting</li>
+</ul>
+<p><strong> Algorithm: </strong> </p>
+<p>The algorithms is very similar to <a href="#### getComparisonNetwork.php">getComparisonNetwork.php</a>. The difference lies in that it pushes the image link to be used in <code>img</code> tag. If you plan to upgrade the website we would recommend merging the two scripts.</p>
+<h4 id="getpaintingsphp">getPaintings.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>name: Name of the Painting</li>
+</ul>
+<p><strong> Algorithm: </strong> </p>
+<p>This just returns the <code>scandir</code> result of <code>&lt;code&gt;/public/data</code> directory.</p>
+<h4 id="getrawdataphp">getRawData.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>name: Name of the Painting</li>
+</ul>
+<p><strong> Algorithm: </strong> </p>
+<p>This just reads every data.csv file and creates a entry for all the rows. You can maninpulate the data you would like to show in raw data visualisation. It will also add image information to the row which is nothing but just adding a link. </p>
+<h4 id="getreplicainfophp">getReplicaInfo.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>paintingName: Name of the painting for which you want the data.</li>
+<li>paintingReplica: Replica for which you want the information.</li>
+</ul>
+<p><strong> Algorithm: </strong></p>
+<p>The purpose of this file is to provide the data for narrative visualisation.</p>
+<ul>
+<li>First this API will look into the <code>paintingName</code> directory, find the <code>data.csv</code> file and collect all the information about the <code>paintingReplica</code>. PS all this information about <code>paintingReplica</code> and <code>paintingName</code> can be taken from <a href="#getreplicanamesphp">getReplicaName.php</a> and <a href="#getpaintingsphp">getPaintings.php</a></li>
+<li>Once that is done the code tries to optimally store the content for frontend.</li>
+<li>Next thing is collection of owner information which includes about the owner narrative and image of the owner. This information is kept with every replica in data directory.</li>
+<li>Finally all data is passed to the api requester.</li>
+</ul>
+<h4 id="getreplicanamesphp">getReplicaNames.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>name: Name of the painting for which you want the data.</li>
+</ul>
+<p><strong> Algorithm: </strong></p>
+<p>This API provides all the names of Replica for a painting that it takes as a paramter. The results are from <code>scandir</code> function.</p>
+<h4 id="getsocialnetworkdataphp">getSocialNetworkData.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong>Params: Get</strong></p>
+<ul>
+<li>name: Name of the painting for which you want the data.</li>
+</ul>
+<p><strong> Algorithm: </strong></p>
+<p>This is same as <a href="#allsocialnetworkphp">allSocialNetwork.php</a>. The only difference lies is in that it provides social network for a specific painting that it takes as a paramters.</p>
+<h4 id="chord_diagramphp">chord_diagram.php</h4>
+<p><strong> Requires </strong></p>
+<p><a href="#commonsphp">commons.php</a></p>
+<p><strong> Algorithm: </strong></p>
+<p>This file is used to collect information on chord flow. How this works is it scans all the excel CSVs in the data folder capture the replica flow and based on the year in which the transaction happened calculates the range of the year. Once the year range is defined the transaction is inserted in that range. In this key 1860 would represent that the transaction happened in between 1860-1885. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Frontend/" class="btn btn-neutral float-right" title="Front End">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Frontend/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

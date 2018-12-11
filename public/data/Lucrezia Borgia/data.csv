@@ -1,0 +1,15 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+120_01,Lucrezia Borgia,1861,w/c,17,Benjamin Godfrey Windus,1,1860,London,yes,,,51.60629800,-0.07416700,1,manufacturer
+120_01,Lucrezia Borgia,1861,w/c,17,Christies,2,1868,London,yes,,,51.57742746,-0.029682,0,auction house
+120_01,Lucrezia Borgia,1861,w/c,17,Frederick Leyland,3,1868,Liverpool,,,yes,53.38837508,-2.92035654,73.1,shipping
+120_01,Lucrezia Borgia,1861,w/c,17,George Rae,4,1874,Birkenhead,,,yes,53.39040900,-3.03281700,126,stockbroker
+120_01,Lucrezia Borgia,1861,w/c,17,Charles Ricketts,5,1903,London,yes,,,51.54776062,-0.08865956,1,artist
+120_01,Lucrezia Borgia,1861,w/c,17,Tate Museum,6,1916,London,yes,,,51.49098900,-0.12665100,0,museum
+120_02,Lucrezia Borgia,1871,w/c,24.25,Mrs Ellen Tong,1,1878,Manchester,,,yes,53.45387899,-2.14051246,1,collector
+120_02,Lucrezia Borgia,1871,w/c,24.25,William and Ellen Coltart,2,1886,Liverpool,,,yes,53.50699337,-3.09028688,0,merchant
+120_02,Lucrezia Borgia,1871,w/c,24.25,Joseph and Fanny Rust Beausire,3,1902,Birkenhead,,,yes,53.389991,-3.023009,1,shipping
+120_02,Lucrezia Borgia,1871,w/c,24.25,Christies,4,1934,London,yes,,,51.57742746,-0.029682,0,auction house
+120_02,Lucrezia Borgia,1871,w/c,24.25,Barbizon House,5,1934,London,yes,,,51.39802724,-0.25882553,173.5,gallery
+120_02,Lucrezia Borgia,1871,w/c,24.25,Cecil French,6,1935,London,yes,,,51.37968777,-0.05230185,1,artist
+120_02,Lucrezia Borgia,1871,w/c,24.25,Grenville Winthrop,7,1938,New York,,yes,,40.71278370,-74.00594130,1,lawyer
+120_02,Lucrezia Borgia,1871,w/c,24.25,Fogg Museum,8,1943,Cambridge,,yes,,42.37361580,-71.10973350,0,museum

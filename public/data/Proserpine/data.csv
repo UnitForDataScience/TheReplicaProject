@@ -1,0 +1,62 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+127_01,Proserpine,1871,pastel,38.5,Jane Morris,1,1882,London,yes,,,51.46658026,-0.20873642,0,artist
+127_01,Proserpine,1871,pastel,38.5,May Morris,2,1914,London,yes,,,51.38250298,-0.18639638,0,designer 
+127_01,Proserpine,1871,pastel,38.5,Ashmolean Museum,3,1939,Oxford,,,yes,51.75202090,-1.25772630,0,museum
+127_02,Proserpine,1871,chalk,38.5,Private collection,1,1970,Off coast,,,,52.468456,2.150574,1,collector
+127_02,Proserpine,1871,chalk,38.5,Woolley and Wallis,2,1981,Salisbury,,,yes,‎51.068,-1.79,1,auction house
+127_02,Proserpine,1871,chalk,38.5,Private collection,3,1981,Off coast,,,,52.468456,2.150574,1,collector
+127_02,Proserpine,1871,chalk,38.5,Christies,4,2007,London,yes,,,51.58608176,-0.28413181,1,auction house
+127_02,Proserpine,1871,chalk,38.5,Private collection,5,2007,Off coast,,,yes,52.468456,2.150574,"360,000",collector
+127_03,Proserpine,1874,pen & ink,8.5,Jane Morris,1,1874,London,yes,,,51.46658026,-0.20873642,0,artist
+127_03,Proserpine,1874,pen & ink,8.5,May Morris,2,1914,London,yes,,,51.38250298,-0.18639638,0,designer
+127_03,Proserpine,1874,pen & ink,8.5,John Bryson,3,1939,Oxford,,,yes,51.752022,-1.257677,1,collector
+127_03,Proserpine,1874,pen & ink,8.5,Ashmolean Museum,4,1976,Oxford,,,yes,51.75202090,-1.25772630,0,museum
+127_04,Proserpine,1874,oil,49.75,Frederick Leyland,1,1874,Liverpool,,,yes,53.38837508,-2.92035654,802,shipping
+127_04,Proserpine,1874,oil,49.75,Christies,2,1892,London,yes,,,51.57742746,-0.029682,0,auction house
+127_04,Proserpine,1874,oil,49.75,W Graham Robertson,3,1892,London,yes,,,51.53961588,-0.2270185,567,writer
+127_04,Proserpine,1874,oil,49.75,Tate Museum,4,1940,London,yes,,,51.49098900,-0.12665100,0,museum
+127_05,Proserpine,1875,chalk,46,William Graham,1,1875,Glasgow,,,yes,55.86423700,-4.25180600,1,politician
+127_05,Proserpine,1875,chalk,46,Frances Jane Horner thro Agnew,2,1886,Somerset,,,yes,51.05870000,-2.94990000,147,collector
+127_05,Proserpine,1875,chalk,46,Robson and Co,3,1895,London,yes,,,51.5118238,0.00019233,1,architect
+127_05,Proserpine,1875,chalk,46,H D Lyon,4,1957,London,yes,,,51.5700042,-0.32652123,1,merchant
+127_05,Proserpine,1875,chalk,46,James Coats Gallery,5,1960,New York,,yes,,40.748817,-73.985428,1,dealer
+127_05,Proserpine,1875,chalk,46,Ephron Galleries,6,1964,New York,,yes,,40.71416670,-74.00638890,1,dealer
+127_05,Proserpine,1875,chalk,46,Christies,7,2007,London,yes,,,51.57742746,-0.029682,0,auction house
+127_05,Proserpine,1875,chalk,46,Private collection,8,2007,Off coast,,,yes,52.468456,2.150574,1,collector
+127_06,Proserpine,1877,oil,46,William Alfred Turner,1,1877,Manchester,,,yes,53.483959,-2.244644,1575,manufacturer
+127_06,Proserpine,1877,oil,46,Christies,2,1888,London,yes,,,51.57742746,-0.029682,0,auction house
+127_06,Proserpine,1877,oil,46,Charles Butler,3,1888,Hertfordshire ,,,yes,51.8098,-0.2377,745.1,lawyer
+127_06,Proserpine,1877,oil,46,Charles Butler2,4,1910,Essex UK,,,yes,51.7343313,0.4690888,0,descendant
+127_06,Proserpine,1877,oil,46,Christies,5,1964,London,yes,,,51.57742746,-0.029682,0,auction house
+127_06,Proserpine,1877,oil,46,L S Lowry,6,1964,Manchester,,,yes,53.480713,-2.234377,5250,artist
+127_06,Proserpine,1877,oil,46,Christies,7,1987,London,yes,,,51.57742746,-0.029682,0,auction house
+127_06,Proserpine,1877,oil,46,John Paul Getty Jr,8,1987,London,yes,,,51.46897107,-0.01220162,"1,500,000",collector
+127_06,Proserpine,1877,oil,46,Private collection,9,2003,Off coast,,,yes,52.481138,1.753449,1,collector
+127_07,Proserpine,1878,w/c,30.5,Frederick Startridge Ellis,1,1878,London,yes,,,51.4652515,-0.14786539,262,publisher
+127_07,Proserpine,1878,w/c,30.5,James H Hutton,2,1880,Manchester,,,yes,52.755308,-2.227478,1,collector
+127_07,Proserpine,1878,w/c,30.5,Agnew,3,1884,Manchester,,,yes,52.755308,-2.227478,299.5,dealer
+127_07,Proserpine,1878,w/c,30.5,Christies,4,1884,London,yes,,,51.57742746,-0.029682,0,auction house
+127_07,Proserpine,1878,w/c,30.5,Agnew,5,1884,London,yes,,,51.50670000,-0.12700000,252,dealer
+127_07,Proserpine,1878,w/c,30.5,Clara Jessup Bloomfield Moore,6,1884,London,yes,,,51.51704715,-0.20526182,0,collector
+127_07,Proserpine,1878,w/c,30.5,Christies,7,1900,London,yes,,,51.57742746,-0.029682,0,auction house
+127_07,Proserpine,1878,w/c,30.5,Knoedler,8,1900,London,yes,,,51.58608176,-0.28413181,336,dealer
+127_07,Proserpine,1878,w/c,30.5,Private collection,9,1975,Off coast,,,yes,52.755308,2.227478,1,collector
+127_08,Proserpine,1880,chalk,47,William Graham,1,1880,Glasgow,,,yes,55.86423700,-4.25180600,1,politician
+127_08,Proserpine,1880,chalk,47,Christies,2,1886,London,yes,,,51.57742746,-0.029682,0,auction house
+127_08,Proserpine,1880,chalk,47,Frances Jane Horner thro Agnew,3,1886,Somerset,,,yes,51.05870000,-2.94990000,147,descendant
+127_08,Proserpine,1880,chalk,47,Barbizon House,4,1922,London,yes,,,51.39802724,-0.25882553,1,dealer
+127_08,Proserpine,1880,chalk,47,Jane Benachi,5,1922,Off coast,,,yes,52.50190700,2.56805400,1,collector
+127_08,Proserpine,1880,chalk,47,Christies,6,1970,London,yes,,,51.57742746,-0.029682,0,auction house
+127_08,Proserpine,1880,chalk,47,David Hughes Stone Gallery,7,1970,Newcastle,,,yes,54.97328,-1.61396,4725,dealer
+127_08,Proserpine,1880,chalk,47,Private collection,8,1971,Off coast,,,yes,52.50859400,2.40875200,1,collector
+127_08,Proserpine,1880,chalk,47,Sothebys,9,2013,London,yes,,,51.54624657,-0.16545449,0,auction house
+127_08,Proserpine,1880,chalk,47,Private collection,10,2013,Off coast,,,yes,52.408179,2.123108,"3,274,500",collector
+127_09,Proserpine,1882,oil,30.75,Leonard Valpy,1,1882,London,yes,,,51.56750849,-0.09254522,420,lawyer
+127_09,Proserpine,1882,oil,30.75,William Imrie,2,1900,Liverpool,,,yes,53.41058,-2.97794,1,shipping
+127_09,Proserpine,1882,oil,30.75,Christies,3,1907,London,yes,,,51.57742746,-0.029682,0,auction house
+127_09,Proserpine,1882,oil,30.75,Stephen Thomas Gooden,4,1907,London,yes,,,51.57742746,-0.029682,462,dealer
+127_09,Proserpine,1882,oil,30.75,Christies,5,1908,London,yes,,,51.57742746,-0.029682,0,auction house
+127_09,Proserpine,1882,oil,30.75,Col James B Gaskell,6,1908,Woolton,,,yes,53.3667,-2.8667,477,manufacturer
+127_09,Proserpine,1882,oil,30.75,Christies,7,1926,London,yes,,,51.57742746,-0.029682,0,auction house
+127_09,Proserpine,1882,oil,30.75,William Walker Sampson,8,1926,London,yes,,,51.46549346,-0.20856472,357,dealer
+127_09,Proserpine,1882,oil,30.75,Birmingham Museum,9,1927,Birmingham,,,yes,52.48015000,-1.90361200,550,museum

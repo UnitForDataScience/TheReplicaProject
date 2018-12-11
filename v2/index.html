@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Replica Project</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/herberger/lib/leaflet/leaflet.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="/herberger/public/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/herberger/public/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/herberger/v2/public/css/index.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css">
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse"
+                data-target="#home" aria-controls="home" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Replica Project</a>
+        <div class="collapse navbar-collapse" id="home">
+            <ul class="navbar-nav mr-auto" role="tablist">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#tab1" data-toggle="tab" rol="tab">HOME<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#tab2" data-toggle="tab" rol="tab" id="history">A HISTORY OF 19th-C.
+                        AUTOGRAPH
+                        REPLICAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab3" data-toggle="tab" rol="tab" id="methods">METHODS AND
+                        INSTRUCTIONS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#visuals" data-toggle="tab" rol="tab" id="visuals_call">VISUALS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab4" data-toggle="tab" rol="tab" id="biblo">BIBLIOGRAPHY AND
+                        RESOURCES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab5" data-toggle="tab" rol="tab" id="help">HELP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-content">
+        <div class="container-fluid tab-pane fade" id="visuals">
+            <div class="row">
+                <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+                    <ul class="nav nav-pills flex-column" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#narratives-home" role="tab"
+                               id="narrative-display">Narratives: Replicas, Owners, Locations<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item" id="comparison-tab">
+                            <a class="nav-link" data-toggle="tab" href="#comparison-home" role="tab"
+                            >Trajectory Comparisons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#paintings-home" role="tab">Image
+                                Comparisons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#rawData-home" role="tab">Collection Browser</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#histograms-home" role="tab">Histograms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#socialnetwork-home" role="tab">Transaction
+                                Network</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#chord-home" role="tab">Transaction Chord Flow
+                                Diagrams</a>
+                        </li>
+                        <!--<li class="nav-item">-->
+                        <!--<a clatoggle_auctionss="nav-link" data-toggle="tab" href="#biblo-home" role="tab">Bibliography and-->
+                        <!--Resources</a>-->
+                        <!--</li>-->
+                    </ul>
+                </nav>
+                <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="narratives-home" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 row">
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            style="margin-left:1%;"
+                                            id="instruction1" onclick="toggleInstruction(this.id)">Instructions
+                                    </button>
+                                </div>
+                                <div class="card row offset-sm-0 col-xl-8 col-lg-8 col-md-12 col-sm-12"
+                                     style="margin-top: 5px;">
+                                    <div class="card-header">
+                                        <div class="row col-sm-12">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 offset-1 offset-sm-0">
+                                                <div class="row" style="margin-top: 10%;">
+
+
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <div class="col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                                                <label for="narrativePaintingPicker"
+                                                                       style="padding: 5px;">Painting: </label>
+                                                            </div>
+                                                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                                                                <select class="form-control"
+                                                                        id="narrativePaintingPicker">
+
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                                                <label for="narrativeReplicaPicker"
+                                                                       style="padding: 5px;">Replica: </label>
+                                                            </div>
+                                                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                                                                <select class="form-control"
+                                                                        id="narrativeReplicaPicker">
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="narrativeMaps"
+                                             class="col-xl-12 col-lg-12 col-md-12 col-sm-12 narrativeMap borderSet">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="card col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12"
+                                         style="max-width:100%; margin-top:5px; min-height : 290px;">
+                                        <div class="card-header">Painting Information</div>
+                                        <div class="card-body">
+                                            <div class="row" id="narrativePaintingInfo">
+                                                <div class="col-md-7 col-sm-7 col-xl-7 col-lg-7">
+                                                    <img style="min-height: 100px;max-height: 200px;"
+                                                         id="narrativesImage"
+                                                         class="img-fluid img-thumbnail rounded float-left"
+                                                         src="/herberger/public/data/Beata Beatrix/Replicas/101_01/image.jpg">
+                                                </div>
+                                                <div class="col-md-5 col-sm-5 col-xl-5 col-lg-5"
+                                                     style="font-size:12px; text-align: left; margin-top: 5px;">
+                                                    <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12 row"
+                                                         style="margin-top:2%;">
+                                                        <span style="width: 100%;" id="narrativeYear">Year: 1864</span>
+
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12 row"
+                                                         style="margin-top:12%;">
+                                                        <span style="width: 100%;"
+                                                              id="narrativeMedium">Medium: Oil</span>
+
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12 row"
+                                                         style="margin-top:12%;">
+                                                    <span style="width: 100%;"
+                                                          id="narrativeHeight">Height(in): 34</span>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12 row"
+                                                         style="margin-top:12%;">
+                                                        <span style="width: 100%;"
+                                                              id="narrativePlace">Place: London</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 col-12"
+                                         style="max-width:100%; margin-top: 5px; min-height: 230px">
+                                        <div class="card-header col-12 row">
+                                            <div class="col-2">
+                                                <i class="fas fa-backward" id="backwardOwner"
+                                                   style="cursor: pointer;"></i></div>
+                                            <div class="col-8" style="text-align: center;">Owner Information</div>
+                                            <div class="col-2"
+                                                 style="float: right;"><i
+                                                    class="fas fa-forward" id="forwardOwner"
+                                                    style="cursor: pointer;"></i></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-5 col-sm-5 col-xl-5 col-lg-5 col-5 row">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                         style="padding: 0px;">
+                                                        <img style="min-height: 100px;max-height: 120px;"
+                                                             id="narrativesOwnerImage"
+                                                             class="img-fluid img-thumbnail rounded float-left" src="">
+                                                    </div>
+                                                    <div style="padding: 0px;"
+                                                         class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                        <div style="font-size: 10px;"
+                                                             class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <b>Name:</b> <span id="narrativeOwnerName"></span>
+                                                        </div>
+                                                        <div style="font-size: 10px;"
+                                                             class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <b>Location:</b> <span id="narrativeOwnerLocation"></span>
+                                                        </div>
+                                                        <div style="font-size: 10px;"
+                                                             class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <b>Number:</b> <span id="narrativeOwnerNumber"></span>
+                                                        </div>
+                                                        <div style="font-size: 10px;"
+                                                             class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <b>Profession:</b> <span
+                                                                id="narrativeOwnerProfession"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="wp-25 p-7 col-md-12 col-sm-12 col-12 col-xl-7 col-lg-7"
+                                                     style="overflow-y: scroll; font-size: 11px;height: 250px;"
+                                                     id="narrativeAboutOwner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="socialnetwork-home" role="tabpanel"
+                             aria-labelledby="nav-profile-tab">
+                            <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                <button type="button"
+                                        class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                        style="margin-left:1%;"
+                                        id="instruction6" onclick="toggleInstruction(this.id)">Instructions
+                                </button>
+                            </div>
+                            <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 row">
+                                <div class="card row col-12"
+                                     style="margin-top: 5px;">
+                                    <div class="card-header row">
+
+
+                                        <div class="col-md-12 col-lg-12 col-xl-12 col-12 col-sm-12 justify-content-end row">
+                                            <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                                                <label
+                                                        style="padding: 5px;">Painting: </label>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                <select class="form-control" id="networkPaintingPicker">
+                                                    <option value="All">All</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-lg-12 col-xl-12 col-12 col-sm-12 justify-content-end row">
+                                            <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                                                <label
+                                                        style="padding: 5px;">ReplicaId: </label>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                <select class="form-control" id="networkReplicaPicker">
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body row">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 row justify-content-end"
+                                             style="min-height: 100px;padding: 1em;">
+                                            <div class="btn-group btn-group-toggle col-md-12 col-sm-12 col-12 col-xl-6 col-lg-6"
+                                                 data-toggle="buttons"
+                                                 style="height: 50px;">
+                                                <label class="btn btn-primary filter_tn" id="filter_museum">
+                                                    <input type="checkbox" name="options" id="option1"
+                                                           autocomplete="off">
+                                                    Museum/Galleries
+                                                </label>
+                                                <label class="btn btn-danger filter_tn" id="filter_auction">
+                                                    <input type="checkbox" name="options" id="option2"
+                                                           autocomplete="off"
+                                                           value="Total">
+                                                    Auction House/Dealer
+                                                </label>
+                                                <label class="btn btn-warning filter_tn" id="filter_indi">
+                                                    <input type="checkbox" name="options" id="option3" value="Out-Node"
+                                                           autocomplete="off">Individual
+                                                </label>
+                                            </div>
+                                            <div id="time-slider" style="margin-top: 1%;"
+                                                 class="col-sm-12 col-12 col-md-12 col-xl-6 col-lg-6"
+                                            ></div>
+
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <svg width="1100" height="400" id="networkSvg"></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="paintings-home" role="tabpanel"
+                             aria-labelledby="nav-profile-tab" style="margin-left: 2%;">
+                            <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 row">
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            style="margin-left:1%;"
+                                            id="instruction3" onclick="toggleInstruction(this.id)">Instructions
+                                    </button>
+                                </div>
+                                <div class="card row col-12"
+                                     style="margin-top: 5px;">
+                                    <div class="card-header row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <label for="narrativePaintingPicker"
+                                                   style="padding: 5px;">Painting: </label>
+                                        </div>
+                                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <select class="form-control" id="paintingsPaintingPicker"
+                                                    onchange="setupPaintingsTab()">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="paintingsDisplay"
+                                             class="col-xl-12 col-lg-12 col-md-12 col-sm-12 narrativeMap borderSet row">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="comparison-home" role="tabpanel"
+                             aria-labelledby="nav-profile-tab" style="margin-left: 2%;">
+                            <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 row">
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            style="margin-left:1%;"
+                                            id="instruction2" onclick="toggleInstruction(this.id)">Instructions
+                                    </button>
+                                </div>
+                                <div class="card row col-12"
+                                     style="margin-top: 5px;">
+                                    <div class="card-header row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <label for="narrativePaintingPicker"
+                                                   style="padding: 5px;">Painting: </label>
+                                        </div>
+                                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <select class="form-control" id="comparisonPaintingPicker">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="comparisonDisplay"
+                                             class="col-xl-12 col-lg-12 col-md-12 col-sm-12 narrativeMap borderSet row">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="rawData-home" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="row">
+
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            data-toggle="modal" data-target="#rawDataFilters">Advance Filters
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            style="margin-left:1%;"
+                                            id="instruction4" onclick="toggleInstruction(this.id)">Instructions
+                                    </button>
+                                </div>
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12">
+                                    <table id="rawDataTable" class="table table-striped table-bordered"
+                                           style="width:100%">
+                                        <thead>
+                                        <tr>
+                                            <th>Painting Name</th>
+                                            <th>Painting Image</th>
+                                            <th>Replica Id</th>
+                                            <th>Owner #</th>
+                                            <th>Owner Name</th>
+                                            <th>Owner City</th>
+                                            <th>Owner Image</th>
+                                            <th>Owner Profession</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="rawDataSrc">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="histograms-home" role="tabpanel"
+                             aria-labelledby="nav-profile-tab">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            style="margin-left:1%;"
+                                            id="instruction5" onclick="toggleInstruction(this.id)">Instructions
+                                    </button>
+                                </div>
+                                <div id="totalWork" class="col-12" style="height: 500px;width: 100%;"></div>
+                                <div id="hist_comp" class="col-12" style="height: 500px;width: 100%;"></div>
+                                <div id="in_london" class="col-12" style="height: 500px;width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="chord-home" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                            <div class="row" id="add_chord">
+                                <div class="col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12 row justify-content-end">
+                                    <button type="button"
+                                            class="btn btn-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"
+                                            style="margin-left:1%;"
+                                            id="instruction7" onclick="toggleInstruction(this.id)">Instructions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="biblo-home" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            ...
+                        </div>
+                    </div>
+                    <!--   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Launch demo modal
+                    </button> -->
+                    <div class="modal fade" id="rawDataFilters" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Collection Filter</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                                        <div class="row">
+
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                 style="clear: both;">
+                                                <div class="row col-12">
+                                                    <div class="col-6" style="margin-left: -4%;"><b>Select
+                                                        Paintings: </b></div>
+                                                    <div class="col-6"><b>Selected
+                                                        Paintings: </b></div>
+                                                </div>
+                                                <select id="paitingFilter"
+                                                        class="multi-select col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                        multiple searchable="Search here..">
+
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                 style="margin-top: 2%;">
+                                                <div class="row col-12">
+                                                    <div class="col-6" style="margin-left: -4%;"><b>Select
+                                                        Replica
+                                                        Ids: </b></div>
+                                                    <div class="col-6"><b>Selected
+                                                        Replica
+                                                        Ids: </b></div>
+                                                </div>
+                                                <select id="replicaFilter"
+                                                        class="multi-select col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                        multiple searchable="Search here..">
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                 style="margin-top: 2%;">
+                                                <div class="col-12 row">
+                                                    <div class="col-6" style="margin-left: -4%;"><b>Select
+                                                        Owner Number: </b></div>
+                                                    <div class="col-6"><b>Selected
+                                                        Owner Number: </b></div>
+                                                </div>
+                                                <select id="ownerNumberFilter"
+                                                        class="multi-select col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                        multiple searchable="Search here..">
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                 style="margin-top: 2%;">
+                                                <div class="row col-12">
+                                                    <div class="col-6" style="margin-left: -4%;"><b>Select
+                                                        Owners: </b></div>
+                                                    <div class="col-6"><b>Selected
+                                                        Owners: </b></div>
+                                                </div>
+                                                <select id="owernFilter"
+                                                        class="multi-select col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                        multiple searchable="Search here..">
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                 style="margin-top: 2%;">
+                                                <div class="col-12 row">
+                                                    <div class="col-6" style="margin-left: -4%;"><b>Select
+                                                        Owner City: </b></div>
+                                                    <div class="col-6"><b>Selected
+                                                        Owner City: </b></div>
+                                                </div>
+                                                <select id="ownerCityFilter"
+                                                        class="multi-select col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                        multiple searchable="Search here..">
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                 style="margin-top: 2%;">
+                                                <div class="col-12 row">
+                                                    <div class="col-6" style="margin-left: -4%;"><b>Select
+                                                        Professions: </b></div>
+                                                    <div class="col-6"><b>Selected
+                                                        Professions: </b></div>
+                                                </div>
+                                                <select id="professionFilter"
+                                                        class="multi-select col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                        multiple searchable="Search here..">
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="float-right col-12 col-sm-12 col-md-2 offset-xl-1 offset-lg-1 offset-0 col-lg-2 col-xl-2 btn btn-primary"
+                                         style="margin-top: 1%;" id="applyFilter" data-dismiss="modal"
+                                         aria-label="Close">
+                                        Apply
+                                    </div>
+
+                                    <div class="float-right col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-danger"
+                                         style="margin-top: 1%;" id="resetFilter">
+                                        Reset
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="chordModal" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="instructionTitle"></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body col-12" id="instructions">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+        <div class="container-fluid tab-pane fade show active col-11" id="tab1">
+            <div class="col-12" style="margin-top: 3%;">
+                <P STYLE="margin-right: -0.5in; margin-bottom: 0in; line-height: 100%">
+                    <FONT FACE="Times, serif"><FONT SIZE=3><B>WELCOME TO THE REPLICA
+                        PROJECT</B></FONT></FONT></P>
+                <P STYLE="margin-right: -0.5in; margin-bottom: 0in; line-height: 100%">
+                    <FONT FACE="Times, serif"><FONT SIZE=3>The purpose of this project is to explore the role of
+                        19th-century autograph replicas in global aesthetics, networks and markets through an initial
+                        case study of the many autograph replicas produced by Dante Gabriel Rossetti who made a living
+                        from these replicas after refusing to exhibit his work after the 1850s. Autograph replicas were
+                        multiple versions made by the same artist who produced the first version and often commissioned
+                        by patrons or dealers working to promote these artists. They were highly valued and extremely
+                        popular with collectors, dealers and museums, all of which considered replicas by the artist’s
+                        hand to be originals, not copies.</FONT></FONT></P>
+                <P STYLE="margin-right: -0.5in; margin-bottom: 0in; line-height: 100%">
+                    <BR>
+                </P>
+                <P STYLE="margin-right: -0.5in; margin-bottom: 0in; line-height: 100%">
+                    <FONT FACE="Times, serif"><FONT SIZE=3>This site provides multiple views of the spatial, temporal,
+                        artistic, and economic dimensions of the Rossetti Replica Dataset. In addition to searchable
+                        provenances and owners, there are functions (see the sidebar at left) that allow users to see
+                        and compare replicas and their trajectories over time and geography. We have organized these
+                        capabilities into 7 sections of the project: Narratives, Trajectory Comparisons, Image
+                        Comparisons, Collection Browser, Histograms, Transaction Network, and Transaction Chord
+                        Diagrams, each of which offers different ways of assessing the information about global market
+                        transactions of autograph replicas. The site also includes a selected bibliography of relevant
+                        scholarship. </FONT></FONT>
+                </P>
+                <P STYLE="margin-right: -0.5in; margin-bottom: 0in; line-height: 100%">
+                    <BR>
+                </P>
+                <P STYLE="margin-right: -0.5in; margin-bottom: 0in; line-height: 100%">
+                    <FONT FACE="Times, serif"><FONT SIZE=3>Below you will see links to
+                        (1) a brief explanation of the background and intentions of this
+                        project and (2) methods and instructions helping you navigate the 7
+                        sites within this project, (3) a bibliography and list of resources
+                        used and (4) a Help link.</FONT></FONT></P>
+            </div>
+            <div class="col-12" style="margin-top: 3%;">
+                <ul>
+                    <li><a href="#" onclick="getThisOut('history')">A HISTORY OF 19th-C. AUTOGRAPH REPLICAS</a></li>
+                    <li><a href="#" onclick="getThisOut('methods')">METHODS AND INSTRUCTIONS</a></li>
+                    <li><a href="#" onclick="getThisOut('biblo')">BIBLIOGRAPHY AND RESOURCES</a></li>
+                    <li><a href="#" onclick="getThisOut('help')">HELP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid tab-pane fade col-11" id="tab2">
+            <div class="col-12" style="margin-top: 3%;">
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><B>A
+                    HISTORY OF 19</B><SUP><B>th</B></SUP><B>-C. AUTOGRAPH REPLICAS: </B>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">Replication
+                    in the nineteenth century, called a &quot;culture of replication&quot;
+                    (Orvell 39), affected all aspects of nineteenth-century Victorian
+                    life—literature, art, manufacturing, science and media (Codell and
+                    Hughes). In the nineteenth century, most artists defined the replica
+                    as a subsequent <U>version</U> (not identical copy) of their earlier
+                    work. Unlike copies or imitations, autograph replicas were an
+                    editorial intervention by the artist or a patron commissioning a
+                    replica, much like variations on musical themes. Patrons often
+                    requested changes in the painting subject’s size, medium or
+                    content. Sometimes artists created replicas to rethink a subject by
+                    experimenting with changes and versions. Popular in the nineteenth
+                    century and now reconsidered within the postmodernist fascination
+                    with appropriation and repetition, the autograph replica challenges
+                    notions of originality, authenticity, the nature of creativity, and
+                    the ontology of the artwork itself. This project takes up art
+                    historian David Freedberg's suggestion: &quot;copies and
+                    transformations remains one of the great tasks of the history of
+                    images&quot; (121); replicas were such &quot;transformations.”
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%">Replicas were
+                    propelled by both commercial and creative motives and had a special
+                    market niche; subsequent versions often cost more than first
+                    versions. Artists argued that subsequent replicas reflected their
+                    increased skill and were thus &quot;value-added.&quot; Replicas’
+                    dissemination patterns were global, being much sought after by
+                    American collectors well into the 20<SUP>th</SUP> and 21<SUP>st</SUP>
+                    centuries, and bought by collectors in Japan, Australia, and South
+                    Africa as well. Autograph replicas can reveal changing tastes,
+                    nations’ cultural narratives, and the ways in which economic and
+                    aesthetic values mutually inflect each other.
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%">The Replica Project
+                    site addresses some fundamental art history questions and recent
+                    scholar attention to art market studies and to studies of
+                    collecting: what is the relationship between an image and its
+                    popularity, trajectory, and consumption over time as tastes, markets
+                    and collecting patterns change? How active were patrons in
+                    commissioning replicas? What was the effect of replica production, a
+                    nearly industrial production in Britain and France, on notions of
+                    originality, authenticity and creativity?</P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT COLOR="#000000">Replicas
+                    were not new in the 19th century, and major artists since the
+                    Renaissance produced them, though often replica and copy were
+                    considered synonymous. Renaissance copies were produced often by
+                    workshop assistants with additional touches by the master. In the
+                    18th century in France and Britain, artists produced versions,
+                    replicas, usually for patrons. But these were limited in number,
+                    just a few, 1 or 2, and limited in range, most staying within the
+                    country of origin. In the 19th century many French and British
+                    artists produced versions of an initial painting, and these versions,
+                    called replicas by British artists and repetitions by French artists,
+                    were produced in larger numbers, sometimes up to 9 or 10 versions of
+                    the same subject, and had a global market. As these artists'
+                    celebrity traveled around the world through the press in most cases,
+                    collectors sought or even commissioned replicas of their works, since
+                    replicas were originals created by the artists themselves, and not
+                    copies. Dealers also requested artists repeat subjects or create
+                    variations on their more popular artworks. The production of replicas
+                    was influenced by a wide global art trade on a larger scale than in
+                    previous centuries, especially the expansion of the transatlantic art
+                    market, by patterns of industrial production, and by the ambitions of
+                    new industrialist and mercantilist collectors in Europe and in the
+                    US. </FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT COLOR="#000000">Indeed,
+                    the production of autograph replicas was a culture industry in
+                    England and in France produced by</FONT> Vincent Van Gogh, J. A. D.
+                    Ingres, D. G. Rossetti, Eugène Delacroix, Paul Delaroche, Camille
+                    Corot, Edgar Degas, Jean-Léon Gérôme, Jean-François Millet,
+                    Gustave Courbet, Edward Burne-Jones, William Merritt Chase, Paul
+                    Cézanne, and Claude Monet, among many others, most of whom gained
+                    celebrity status in their lifetimes for themselves and market demands
+                    for their replicas. <FONT COLOR="#000000">Our case study is the
+                        British artist Dante Gabriel Rossetti (1828-1882) who made a living
+                        from the production of commissioned replicas and whose replicas were
+                        much sought-after around the world. Rossetti stopped exhibiting his
+                        art in public after the 1850s, yet he became a celebrity, a star in
+                        the art world despite relying on replicas to make a living, an
+                        indication of the popularity and demand for such works. </FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="margin-bottom: 0in; line-height: 100%">Ultimately, we would
+                    like to expand this to include several more of Rossetti’s works, as
+                    well as replicas by many other Victorian artists who produced them
+                    and perhaps ultimately to include French artists' replicas, a subject
+                    already examined by several scholars. We would like to examine and
+                    compare robust replica markets, art production and consumption among
+                    these artists and ultimately to be able to describe and assess the
+                    global market for 19<SUP>th</SUP>-century autograph replicas, a
+                    market that began in 1870 and continues to the present day.</P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <BR>
+                </P>
+            </div>
+
+        </div>
+        <div class="container-fluid tab-pane fade col-11" id="tab3">
+            <div class="col-12" style="margin-top: 3%;">
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><B>METHODS
+                    AND INSTRUCTIONS:</B></P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">The
+                    Replica Project maps transactional networks of artists, dealers,
+                    patrons and collectors to examine replicas' prolificity, demand and
+                    provenance Each replica within a set has a replica ID, such as
+                    101_02, or 125_03, etc. A replica set is the entire number of
+                    versions of a single subject/title. Works considered include
+                    paintings in oil, pastel, chalk and watercolor. Sketches were not
+                    included as these had a limited market and would have meant adding a
+                    great deal of information and an overwhelming number of transactions
+                    beyond the scope of the project.
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">The
+                    site provides searchable provenances of owners and allows users to
+                    see and compare maps of the trajectories of replicas within a replica
+                    set. Maps show the movement of the pictures over time and geography.
+                    The 7 sections are Narratives: Replicas, Owners, Locations:
+                    Trajectory Comparisons, Image Comparisons; Image Comparisons:
+                    Collection Browser; Histograms, Transaction Network, Transaction
+                    Chord Flow Diagrams. Each section offers different ways of viewing
+                    information. The site also includes a selected bibliography of
+                    relevant scholarship and sources of information and images.
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">The
+                    project has tracked 18 of Rossetti’s most popular and well-known
+                    works and contains up-to-date information available from Virginia
+                    Surtees’ 1972 catalogue raisonné of Rossetti’s drawing and
+                    prints, the Rossetti Archive Online, museum websites and websites of
+                    auction houses, including Sotheby’s, Christie’s and several
+                    smaller houses, from Blouin Art Sales Index and from archivists,
+                    curators, and gallery owners listed in the Bibliography and Sources
+                    section of this site. Provenance information will continue to change
+                    as works from private collections periodically appear on auction
+                    sites, an indication of the sustained popularity of Rossetti’s many
+                    replicas. This site’s list of owners and provenance information
+                    will be updated as needed.
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">NOTE:
+                    Owner numbers: Every owner has a number indicating that owner's place
+                    in the trajectory; e.g., 3 means that person or museum was the 3rd
+                    owner of the replica. The first owner is the first person to
+                    purchase the work from, or be given, the painting by the artist.</P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><B>INSTRUCTIONS
+                    FOR EACH PAGE OF THE PROJECT</B>—these are in the order we
+                    recommend users follow in reading and interacting with these pages:
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+                        “<B>Narratives</B>&quot; tab contains maps of the trajectories of
+                        each replica along with images of owners, of each replica and brief
+                        information about each owner. Some of the replicas' trajectories
+                        were transcontinental; others stayed in Britain either in London or
+                        in provincial museums. In most cases the first version stayed in
+                        London. The slideshow arrows on the lower right panel can be used
+                        to move chronologically from one owner to another. Each replica
+                        also has an ID number: 123_04, means the 4th version of that
+                        subject. The 123 number is the number assigned the subject and is
+                        based on early numbers of all of Rossetti's replicas and is retained
+                        here as we plan to include more replicas as we extend this project.
+                        The maps can be enlarged by moving the mouse zoom and can be moved
+                        left to right by dragging. There is a dropdown menu of painting
+                        titles on the top of the page.</P>
+                </UL>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+                        “<B>Trajectory Comparisons</B>&quot; shows multiple maps to
+                        compare different trajectories and locations for each replica of
+                        each set that traveled within Britain or abroad. Users can zoom on
+                        the individual maps. There is a dropdown menu of painting titles on
+                        the upper right. We used Leaflet.js to create a thumbnail map
+                        visualization for every replica of a painting for each set of
+                        replicas. For private owners whose identity remains unknown we
+                        located them off shore for now; updated checks on auction house
+                        online sites, Sotheby's or Christie's, occasionally turn up the sale
+                        of a privately owned work and list its price, but not always its new
+                        owner's name, profession or location. As we find out these things,
+                        we will adjust new owners' professions, locations and prices and
+                        add images to our project.
+                    </P>
+                </UL>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+                        “<B>Image Comparisons</B>&quot; offers a gallery of the replicas
+                        of each set by painting title so users can compare and contrast all
+                        replicas of a single subject. This is a manual visual comparison. We
+                        added meta-information including replica ID number, year, medium,
+                        height (in.), final location, final owner. To build this, we used
+                        plain Javascript and Bootstrap.</P>
+                </UL>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+                        &quot;<B>Collection Browser</B>&quot; Filters for searches include
+                        titles, replica IDs, owners, owners' professions, owners' locations,
+                        and a number indicating the chronology of the replicas, e.g., 123_04,
+                        means the 4th version of that subject. When a title and ID are
+                        selected, the other options related to that selection appear
+                        automatically. When the user returns to the Collection Browser,
+                        previous choices are removed by selecting ADVANCE FILTERS which
+                        returns users to the search menu; then users must click the RESET to
+                        clear the previous choices and then click APPLY to search again.
+                        Other uses include searching among the owners or among the
+                        professions, to find all lawyers who owned replicas, for example, or
+                        all the replicas owned by Frederick Leyland, for example. To search for an owner or painting,
+                        the user can put whatever is known of the owner’s name (first or last name) or the painting’s
+                        title in the box at the top of the lefthand column, the Select column, and that owner’s full
+                        name or the painting’s full title will appear and can be selected for the righthand column, the
+                        Selected column. To remove any item in the righthand Selected column, simply click on that item.
+                        Once a user selects a painting, all the versions, IDs, owners, locations and professions will be
+                        available in the various Select columns.
+                        <div>For Example</div>
+                        <div>
+                            <img src="/herberger/public/images/browser.png"/>
+                        </div>
+                        </P>
+                </UL>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+                        &quot;<B>Histogram</B>&quot; allows users to explore statistical
+                        information about different replicas. Each vertical displays the
+                        number of replicas in a replica set (defined by sharing a subject).
+                        The legend is color coded for locations or total count of replicas
+                        in each set. If users click on a legend, it will remove/add that
+                        color/location to compare other locations.</P>
+                </UL>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+                        “<B>Transaction Network</B>&quot; is interactive. Users can zoom
+                        to enlarge or reduce the network. Nodes for museums and
+                        non-commercial galleries were marked by blue; auction houses,
+                        commercial galleries and dealers by red; and individual collectors
+                        by yellow. Owners involved in multiple transaction have a larger
+                        node size. Users can filter out the nodes to focus on one set of
+                        owners. Users can also hover on a node to see the owner's names and
+                        that owner's transactions. Users can pick a title from the dropdown
+                        menu on the upper right to find a particular replica's transactions
+                        and by hovering over the nodes, the owner's names will appear for
+                        that set of transactions.
+                    </P>
+                </UL>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%">The
+                    slide with dates is also interactive. Years can be moved and to
+                    focus on a snapshot of a single year, users can overlap the sliders
+                    to find one year. When checking a date or span of year, users will
+                    see owners and transactions for the replica selected or for the &quot;all&quot;
+                    selection for all the replicas. In some years there is only the owner
+                    without a transaction; to find more complete transactions, users
+                    should explore a range of years.
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%">Some
+                    owners owned multiple versions of several replicas and crossed or
+                    combined more than one owner network with their ownerships. This idea
+                    prompted us to look into a transactional system of the paintings. We
+                    decided to build a Network graph using D3.js. To construct this
+                    visualization, we formalized some parameters. With this slider, a
+                    user could view which owner was more active in which time period.
+                    With that in mind, we used D3.js and Jquery to build an excellent
+                    view of a transactional network. Another feature we added to this
+                    visualization was the projection feature on particular paintings and
+                    a specific replica of a painting. Once a painting or replica ID is
+                    selected, the network will display only the network for that painting
+                    or replica. With this feature, a user can look at a specific
+                    transactional network of a painting.</P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <UL>
+                    <LI><P ALIGN=LEFT
+                           STYLE="text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                        <b>"Transaction
+                            Chord Flow Diagrams"</b>
+                        complement the Transaction Network; in the Transaction Network the
+                        quantity of transactions per person or institution is indicated by
+                        node size. In the Transaction Chord Flow Diagrams, which are
+                        separated by time periods, we can see who has been relatively most
+                        active in transactions in a given period of time. It is helpful to
+                        compare the same of years in the Transaction Network and the
+                        Transaction Chord Flow Diagrams.
+                    </P>
+                </UL>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.5in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <BR>
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%">These
+                    chord flow diagrams help visualize the traffic of replicas among
+                    owners. We have broken the data down into several ranges of years.
+                    Each diagram for each range of years has <U>chords anchored</U> along
+                    the circumference or curved outer edge. The anchors of the chords are
+                    color-coded to match the category of <I>recipient owner</I>: auction
+                    house/dealer (red), museums/permanent galleries (blue), individual
+                    collectors (yellow). The size of each bundle of chords anchored
+                    together indicates the relative number of transactions by that owner.
+                    Clockwise the chords first designate dealers/auction houses in red,
+                    then museums in blue, then individual owners in yellow.</P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.5in; text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    The
+                    chords comprise of anchor points and ribbons
+                    which are strands that link owners to one another within and across
+                    the circle, going from the seller or source of the transaction to the
+                    buyer/recipient of the replica being transmitted. Users can hover
+                    over a ribbon to see a sentence briefly describing the transaction.
+                    Some of the ribbons are thin or very close together, so when you move
+                    your mouse to hover over a ribbon, be careful about which ribbon you
+                    are hovering over; we have added a highlighting effect to help users
+                    see the ribbon they are looking for and to help users navigate the
+                    diagram.</P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.5in; text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.5in; text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <A NAME="_gjdgxs"></A>
+                    Ribbons
+                    are colored to match the recipient; the cords are colored to match
+                    the seller. By comparing diagrams with one another, users can observe
+                    tendencies in the overall volume and variety of those who dealt with
+                    the replicas we have on record. For example, in several diagrams, if
+                    we inspect Charles Fairfax Murray’s chords and ribbons, we can
+                    observe how much he dominated the market of both primary and
+                    secondary sales of Rossetti's replicas and the kinds of owners to
+                    whom he usually sold replicas. As you browse along the edge, you can
+                    consider what kind of entity received the replica and what kind of
+                    entity sold or transmitted the replica.
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.5in; text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; text-decoration: none; page-break-after: auto">
+                    <BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.5in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; font-variant: normal; font-style: normal; font-weight: normal; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; text-decoration: none; page-break-after: auto">
+                    <BR>
+                </P>
+                <P STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%"><BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="text-indent: 0in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <BR>
+                </P>
+            </div>
+        </div>
+        <div class="container-fluid tab-pane fade col-11" id="tab4">
+            <div class="col-12" style="margin-top: 3%;">
+                <P ALIGN=LEFT
+                   STYLE="margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <A NAME="_gjdgxs"></A>
+                    <SPAN STYLE="font-variant: normal"><FONT COLOR="#292b2c"><SPAN STYLE="text-decoration: none"><FONT
+                            FACE="Times New Roman, serif"><FONT SIZE=4><SPAN STYLE="font-style: normal"><U><B><SPAN
+                            STYLE="background: #ffffff">BIBLIOGRAPHY
+AND RESOURCES:</SPAN></B></U></SPAN></FONT></FONT></SPAN></FONT></SPAN></P>
+                <P ALIGN=LEFT
+                   STYLE="margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <A NAME="_91l42byp7sin"></A>
+                    <BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.06in; text-indent: 0.44in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+<SPAN STYLE="font-variant: normal"><SPAN STYLE="text-decoration: none"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                 STYLE="font-size: 11pt"><SPAN
+        STYLE="font-style: normal"><SPAN STYLE="background: #ffffff">I
+have discovered a plethora of information on the owners of Rossetti's
+works, information that exists nowhere else. I have found this after
+much googling online resources that included newspaper clippings,
+Wikipedia, auction house provenance, the Rossettiarchives.org which
+provides names but which is out of date, Virginia Surtees' catalog
+raisonné that is also out of date.  I have also used Blouin Art
+sales Index, Redford, and Reitlinger. I have had help from curators
+and archivists who provided information about Rossetti’s works in
+their collections and about owners who donated or collected these
+works.</SPAN></SPAN></FONT></FONT></SPAN></SPAN></P>
+                <P ALIGN=LEFT
+                   STYLE="margin-left: 0.06in; text-indent: 0.44in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+                    <BR>
+                </P>
+                <P ALIGN=LEFT
+                   STYLE="margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+<SPAN STYLE="font-variant: normal"><SPAN STYLE="text-decoration: none"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                 STYLE="font-size: 11pt"><SPAN
+        STYLE="font-style: normal"><SPAN STYLE="background: #ffffff">A
+useful online research source for converting historical prices is
+Measuring Worth,
+</SPAN></SPAN></FONT></FONT></SPAN></SPAN><A HREF="https://www.measuringworth.com/datasets/exchangeglobal/"><SPAN
+                        STYLE="font-variant: normal"><FONT COLOR="#0000ff"><SPAN STYLE="text-decoration: none"><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN
+                        STYLE="font-style: normal"><U><SPAN STYLE="background: #ffffff">https://www.measuringworth.com/datasets/exchangeglobal/</SPAN></U></SPAN></FONT></FONT></SPAN></FONT></SPAN></A><SPAN
+                        STYLE="font-variant: normal"><SPAN STYLE="text-decoration: none"><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN
+                        STYLE="font-style: normal"><SPAN STYLE="background: #ffffff">&nbsp;My
+data is a compilation of catalogues, Victorian writings, archival
+research (Fogg, Delaware, Walters, Smithsonian Archives of American
+Art online or microfilm archival sources), online and hard copy
+catalogues from Sotheby's and Christie's, inquiries to archivists and
+librarians and to Peter Nahum who has been very helpful. For their
+tremendous help in tracking down owners and prices: Darragh
+O'Donoghue, Archive Curator, Tate Library &amp; Archive; Duncan
+Walker, Curator, Russell-Cotes Art Gallery and Museum; Cristina
+Meisner, Research Associate II, Harry Ransom Center; Simon Toll of
+Sotheby's; Sarah Marden, Steward, and Michael Baxter, staff, Croft
+Castle; Masako Kawaguchi, National Museum of Western Art, Tokyo;
+Nadine Lees, Digital Media and Rights Officer, Birmingham Museums
+Trust; Calvin Brown, Associate Curator of Prints and Drawings,
+Princeton University Art Museum; Simona Dolari, Provenance
+Researcher, Archives, Christie's; Katherine Wodehouse, Print Room
+Supervisor, Ashmolean Museum; Anna Sander, Archivist and Curator of
+Manuscripts, Balliol College, Oxford; Duncan Walker, Curator,
+Russell-Cotes Art Gallery &amp; Museum; Clare Keiller, Christie's.</SPAN></SPAN></FONT></FONT></SPAN></SPAN></P>
+                <P ALIGN=LEFT
+                   STYLE="text-indent: 0.5in; margin-bottom: 0in; background: #ffffff; border: none; padding: 0in; font-variant: normal; font-style: normal; line-height: 100%; page-break-inside: auto; widows: 2; orphans: 2; text-decoration: none; page-break-after: auto">
+                    <BR>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Appadurai,
+                        Arjun, “Commodities and the Politics of Value,&quot; in Appadurai,
+                        ed., </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Social Life of Things</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                     STYLE="font-size: 11pt">.
+                    Cambridge: Cambridge UP, 1988, 3-63.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    “<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Art-Collector
+                    William T. Walters&quot; (Obituary), </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                 STYLE="font-size: 11pt"><I>The
+                    Literary Digest</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                               STYLE="font-size: 11pt">
+                    10.6 (Dec 8, 1894), 8.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bann,
+                        Stephen, &quot;Reassessing Repetition in Nineteenth-Century Academic
+                        Painting: Delaroche, Gérôme, Ingres,&quot; in Eik Kahng, ed., </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Repeating Image: Multiples in French Painting from David to Matisse</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">,
+                    Exhibition catalogue, The Walters Art Museum, Baltimore. New Haven,
+                    Yale UP, 2007, 27-52.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bann,
+                        Stephen. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Distinguished
+                    Images; Prints in the Visual Economy of Nineteenth-Century France</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    New Haven and London: Yale UP, 2013.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bann,
+                        Stephen. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Parallel
+                    Lines: Printmakers, Painters and Photographers in Nineteenth-Century
+                    France</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    New Haven and London Yale UP, 2001.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Baudrillard,
+                        J. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Simulacra
+                    and Simulation</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt">.
+                    Trans S. Glaser. Ann Arbor: U of Michigan P, 1994.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Benjamin,
+                        Walter</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>,</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    “The Work of Art in the Age of Mechanical Reproduction,&quot;</FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+                    Illuminations</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">,
+                    Hannah Arendt, ed., trans. H. Zorn. London: Fontana, 1968, 214-18.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bennett,
+                        Mary.</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+                    Artists of the Pre-Raphaelite Circle: The First Generation</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    London: Lund Humphries, 1988. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bennett,
+                        Mary. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Ford
+                    Madox Brown: A Catalogue Raisonné</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                 STYLE="font-size: 11pt">.
+                    London: Yale University Press, 2010 </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Berg,
+                        Maxine, &quot;From Imitation to Invention,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Economic History Review</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                       STYLE="font-size: 11pt">
+                    55.1 (2002), 1-30.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Birnbaum,
+                        Martin.</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>
+                    The Last Romantic</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt">.
+                    NY: Twayne, 1960.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Boggs,
+                        Jean Sutherland et al. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                       STYLE="font-size: 11pt"><I>Degas</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">,
+                    exhibition catalog, Galeries Nationales de Grand Palais, Paris, and
+                    National Gallery of Canada, Ottawa. New York: Metropolitan Museum,
+                    1988. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bourdieu,
+                        P. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Field
+                    of Cultural Production</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                      STYLE="font-size: 11pt">.
+                    New York: Columbia University Press, 1993. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Briefel,
+                        Aviva.</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+                    The Deceivers: Art Forgery and Identity in the Nineteenth Century</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Ithaca: Cornell UP, 2006.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Bronkhurst,
+                        Judith. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>William
+                    Holman Hunt: A Catalogue Raisonné,</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                  STYLE="font-size: 11pt">
+                    2 vols. London: Mellon Centre, 2006. </FONT></FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Cannadine,
+                    David, &quot;Pictures Across the Pond: Perspectives and
+                    Retrospectives,&quot; 19-20, in Reist, </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt">Inge,
+                    ed., </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>British
+                    Models of Art Collecting and the American Response</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Aldershot: Ashgate, 2014, 9-25. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Christie's.
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Important
+                    Victorian and British Impressionist Art</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">,
+                    catalogue of sale on Thursday 11 July 2013.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Christie's.
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Victorian,
+                    Pre-Raphaelite and British Impressionist Art, Including the
+                    Collection of Virginia Surtees, </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                STYLE="font-size: 11pt">catalogue
+                    of sale on Tuesday, 17 June, 2014.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Codell,
+                        Julie, &quot;Martin Birnbaum,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Art
+                    Market Dictionary</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt">,
+                    ed. J. Nathan. Berlin: De Gruyter, 2019, in press. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Codell,
+                        Julie and Linda Hughes, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                             STYLE="font-size: 11pt"><I>Replication
+                    in the Long Nineteenth Century: Re-makings and Reproductions</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Edinburgh: University of Edinburgh Press, 2018.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Codell,
+                        Julie, “Transatlantic Autograph Replicas and the Uplifting of
+                        American Culture,&quot; in Julie Codell and Linda Hughes, eds.
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Replication
+                    in the Long Nineteenth Century: Re-makings and Reproductions</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Edinburgh: University of Edinburgh Press, 2018, 46-66. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Codell,
+                        Julie, &quot;'Second Hand Images,'&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Visual
+                    Resources</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">,
+                    26/3 (Sept 2010), 214-25. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Codell,
+                        Julie, &quot;Charles Fairfax Murray and the Pre-Raphaelite
+                        'Academy',&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt"><U>Collecting
+                    the Pre-Raphaelites</U></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">.
+                    Ed. M. F. Watson (Aldershot: Ashgate, 1997), 35-49.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Cohn,
+                        Marjorie B., and Susan L. Siegfried. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Works
+                    by J.-A.-D. Ingres in the collection of the Fogg Art Museum</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Cambridge, MA: Fogg Art Museum, Harvard University Press, 1980.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Condon,
+                        P. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>In
+                    Pursuit of Perfection: The Art of J.-A.-D. Ingres</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Indiana UP, 1984 (exh. cat.)</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conisbee,
+                        Philip, &quot;Georges de La Tour: The Exhibition in Paris and Other
+                        Matters,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                               STYLE="font-size: 11pt"><I>The
+                    Burlington Magazine</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">
+                    140, No. 1140 (March 1998), 201.</FONT></FONT></P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Crichton-Stuart,
+                    Anthony, and Anna Cunningham, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                          STYLE="font-size: 11pt"><I>Dante
+                    Gabriel Rossetti: </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                  STYLE="font-size: 11pt"><I><U>Proserpine</U></I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>.</U></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT>
+                </P>
+                <P STYLE="text-indent: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt">London:
+                    Agnews, 2016.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Davis,
+                        Whitney. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Replications:</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Archeology,
+                    Art History, Psychoanalysis</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                           STYLE="font-size: 11pt">.
+                    University Park: The Pennsylvania State UP, 1996.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Deleuze,
+                        Gilles. “Plato and the Simulacrum,&quot; trans. R. Krauss, </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>October
+                </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">27,
+                    (1983), 45-56.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Deleuze,
+                        Gilles. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>Difference
+                    and Repetition</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt">.
+                    Trans. Paul Patton. New York: Columbia UP, 1994.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">De
+                        Marchi, N. &amp; S. Raux, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                               STYLE="font-size: 11pt"><I>Moving
+                    Pictures</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Turnhout, Belgium: Brepols, 2014.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Douglas,
+                        Mary. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Purity
+                    and Danger</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                          STYLE="font-size: 11pt">:
+                </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>An
+                    Analysis of Concepts of Pollution and Taboo</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    New York: Praeger, 1966.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Droth,
+                        Martina and Michael Hatt, “</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                           STYLE="font-size: 11pt"><I>The
+                    Greek Slave </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                            STYLE="font-size: 11pt">by
+                    Hiram Powers: A Transatlantic Object,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Nineteenth-Century
+                    Art Worldwide</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">,
+                    15.2 (Summer 2016): </FONT></FONT><A HREF="#_30j0zll"><FONT COLOR="#0000ff"><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://www.19th
+                    c.-artworldwide.org/
+                    summer16/droth-hatt-intro-to-the-greek-slave-by-hiram-powers-a-transatlantic-object</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Dyer,
+                        Jennifer. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                          STYLE="font-size: 11pt"><I>Serial
+                    Images: The Modern Art of Iteration</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">.
+                    Berlin: LIT-Verlag, 2011.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Dzelzainis,
+                        Ella and Ruth Livesey, &quot;Introduction Transatlanticism:
+                        Identities and Exchanges.&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                STYLE="font-size: 11pt"><I>19:
+                    Interdisciplinary Studies in the Long Nineteenth Century</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    9 (2009):</FONT></FONT><A HREF="http://www.19.bbk.ac.uk"><FONT COLOR="#0000ff"><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2
+                                                            STYLE="font-size: 11pt"><U>www.19.bbk.ac.uk</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Elliott&nbsp;</FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+                </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">David
+                    B. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Charles
+                    Fairfax Murray: The Unknown Pre-Raphaelite</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.&nbsp;
+                    London: Oak Knoll, 2000.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Elzea,
+                        Rowland, ed. &quot;The Correspondence Between Samuel Bancroft, Jr.
+                        and Charles Fairfax Murray 1892-1916,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Delaware
+                    Art Museum Occasional Paper</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                           STYLE="font-size: 11pt">
+                    2 (Feb 1980), 79.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Feigenbaum,
+                        Gail and Inge Reist, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                          STYLE="font-size: 11pt"><I>Provenance:
+                    An Alternate History of Art</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                           STYLE="font-size: 11pt">,
+                    Los Angeles: Getty Research Institute, 2012.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fennell,
+                        Francis L., Jr. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                STYLE="font-size: 11pt"><I>The
+                    Rossetti--Leyland Letters: The Correspondence of an Artist and his
+                    Patron</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Athens, OH: Ohio University Press, 1978.</FONT></FONT></P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fletcher,
+                    Pamela and Anne Helmreich, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt"><I>The
+                    Rise of the Modern Art Market in London, </I></FONT></FONT>
+                </P>
+                <P STYLE="text-indent: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt"><I>1850-1939</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    University of Manchester Press, 2011.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fletcher,
+                        Pamela, “Creating the French Gallery: Ernest Gambart and the Rise
+                        of the Commercial Art Gallery in Mid-Victorian London,&quot;
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Nineteenth-Century
+                    Art Worldwide</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">
+                    6. 1 (Spring 2007):
+                    http://www.19thc-artworldwide.org/spring07/143-creating-the-french-gallery-ernest-gambart-and-the-rise-of-the-commercial-art-gallery-in-mid-victorian-london
+                </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fletcher,
+                        Pamela and Anne Helmreich, &quot;Local/Global: Mapping
+                        Nineteenth-Century London's Art Market,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Nineteenth-Century
+                    Art Worldwide</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">,
+                    11, No. 3 (Autumn 2012) </FONT></FONT><A
+                        HREF="http://www.19thc-artworldwide.org/%20autumn12/fletcher-helmreich-mapping-the-london-art-market"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>,http://www.19thc-artworldwide.org/
+                    autumn12/fletcher-helmreich-mapping-the-london-art-market</U></FONT></FONT></FONT></A><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Foster,
+                        Sally. “Replication of things: the case for composite biographical
+                        approaches,&quot; in Julie Codell and Linda Hughes, eds.</FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+                    Replication in the Long Nineteenth Century: Re-makings and
+                    Reproductions</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">.
+                    Edinburgh: Edinburgh University Press, 2018, 23-45.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fredeman,
+                        William, Roger Lewis, Jane Cowan, ed. in </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Correspondence of Dante Gabriel </I></FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt"><I>Rossetti</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    10 vols. Cambridge: D. S. Brewer, 2002-2015. </FONT></FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Frederick,
+                    Margaretta, &quot;The Replication of Dante Gabriel Rossetti's </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Beata
+                    Beatrix</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">--Demand
+                    and </FONT></FONT>
+                </P>
+                <P STYLE="text-indent: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt">Desire,&quot;
+                </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Review
+                    of the Pre-Raphaelite Society</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                             STYLE="font-size: 11pt">
+                    3 (Aut 2013): 27-41.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Freedberg,
+                        David. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>The
+                    Power of Images: Studies in the History and Theory of Response</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Chicago: University of Chicago Press, 1989.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Frith,
+                        William Powell. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                STYLE="font-size: 11pt"><I>My
+                    Autobiography and Reminiscences. </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                 STYLE="font-size: 11pt">
+                    2 vols. New York: Harper &amp; Brothers, 1888. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Goffen,
+                        Rona, “Icon and Vision: Giovanni Bellini's Half-Length Madonnas,&quot;
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Art Bulletin</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                            STYLE="font-size: 11pt">
+                    57, no. 4 (Dec 1975): 487-518. </FONT></FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Gosden,
+                    Chris and Yvonne Marshall, &quot;Cultural Biography of Objects,&quot;
+                </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>World
+                    Archaeology</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                           STYLE="font-size: 11pt">
+                    31 </FONT></FONT>
+                </P>
+                <P STYLE="text-indent: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt">(1999),
+                    169-78. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Gramlich,
+                        Johannes, “Reflections on Provenance Research: Values – Politics
+                        – Art Markets,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                     STYLE="font-size: 11pt"><I>Journal
+                    for Art Market Studies</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                      STYLE="font-size: 11pt">
+                    2 (2017), 1-14. Gérôme &amp; Goupil: Art and Enterprise. Exh. cat.
+                    Trans. Isabel Ollivier. Paris: Réunion des musées nationaux, 2000. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Greenwald,
+                        Diana Seave, &quot;Colleague Collectors: A Statistical Analysis of
+                        Artists’ Collecting Networks in Nineteenth-Century New York,&quot;
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Nineteenth-Century
+                    Art Worldwide </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt">17,
+                    no. 1 (Spring 2018),
+                </FONT></FONT><A
+                        HREF="http://www.19thc-artworldwide.org/spring18/greenwald-on-artists-%20collecting-networks-in-nineteenth-century-new-york"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http:/www.19thc-artworldwide.org/spring18/greenwald-on-artists-
+                    collecting-networks-in-nineteenth-century-new-york</U></FONT></FONT></FONT></A></P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Halliwell,
+                    Stephen. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Aesthetics of Mimesis: Ancient Texts and Modern Problems</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Princeton: </FONT></FONT>
+                </P>
+                <P STYLE="text-indent: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt">Princeton
+                    UP, 2002.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Hansen,
+                        Miriam Bratu, &quot;Benjamin's Aura,&quot;</FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+                    Critical Inquiry </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt">34
+                    (Winter 2008): 336-75.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Harris,
+                        Neil, &quot;The Long Good-Bye: Heritage and Threat in Anglo-America,&quot;
+                        in Reist, ed., </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                               STYLE="font-size: 11pt"><I>British
+                    Models of Art Collecting and the American Response</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Aldershot: Ashgate, 2014, 195-208.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Haskell,
+                        Francis. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Rediscoveries
+                    in Art</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Ithaca: Cornell UP, 1976.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Haverkamp-Begemann,
+                        Egbert. With Carolyn Logan.</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                           STYLE="font-size: 11pt"><I>
+                    Creative Copies: Interpretative Drawings from Michelangelo to
+                    Picasso. </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">New
+                    York: The Drawing Center and Sotheby's Publications, 1988.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Helmreich,
+                        Anne ,“The Art Dealer and Taste: The Case of David Croal Thomson
+                        and the Goupil Gallery, 1885-1897,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Visual
+                    Culture in Britain</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                  STYLE="font-size: 11pt">
+                    6:2 (2005): 31-49.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Helmreich,
+                        Anne, &quot;Victorian Exhibition Culture: The Market Then and the
+                        Museum Today,&quot;</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt"><I>RAVON:
+                    Romanticism and Victorianism on the Net</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">
+                    55 (August 2009),
+                </FONT></FONT><A HREF="https://www.erudit.org/fr/revues/ravon/2009-n55-ravon3697/039556ar/"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>https://www.erudit.org/fr/revues/ravon/2009-n55-ravon3697/039556ar/</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Higonnet,
+                        Anne, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>A
+                    Museum of One's Own.</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                    STYLE="font-size: 11pt">
+                    New York: Prestel, 2009.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Homburg,
+                        Cornelia.</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+                    The Copy Turns Original: Vincent Van Gogh. </I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Amsterdam:
+                    John Benjamins, 1996.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Hoskins,
+                        Janet. “Agency, Biography and Objects,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Handbook
+                    of Material Culture</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">.
+                    Chris Tilley, Webb Keane, Susanne Küchler, Patricia Speyer, eds.
+                    London: Sage, 2006. 74-84.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Humphries,
+                        Lance, “British Aspirations on the Chesapeake Bay: Robert Gilmor,
+                        Jr. (1774–1848) of Baltimore and Collecting in the Anglo- American
+                        Community of the New Republic.” </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                STYLE="font-size: 11pt"><I>British
+                    Models of Art Collecting and the American Response</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Ed. Inge Reist. Aldershot: Ashgate, 2014: 147–62. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Hunt,
+                        William Holman, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                STYLE="font-size: 11pt"><I>Pre-Raphaelitism
+                    and the Pre-Raphaelite Brotherhood</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                  STYLE="font-size: 11pt">.
+                    2 vols. London: Macmillan, 1906.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Joyce,
+                        Rosemary A. &quot;From Place to Place: Provenience, Provenance, and
+                        Archaeology,&quot; in Feigenbaum and Reist, 48-60.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Joyeux-Prunel,
+                        Béatrice, &quot;Circulation and the Art Market,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Journal
+                    for Art Market Studies</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                      STYLE="font-size: 11pt">
+                    2 (2017), </FONT></FONT><A HREF="https://www.fokum-jams.org/index.php/jams/article/view/13"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>https://www.fokum-jams.org/index.php/jams/article/view/13</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Joyeux-Prunel,
+                        Béatrice, Catherine Dossin &amp; Sorin Adam Matei, &quot;Spatial
+                        (Digital) History: A Total Art History?—The Artl@s Project,&quot;
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Visual
+                    Resources</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    29:1-2 (2013), 47-58.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Kahng,
+                        E., ed. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>The
+                    Repeating Image</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                               STYLE="font-size: 11pt">.
+                    New Haven: Yale UP, 2007.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Krauss,
+                        R. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Originality of the Avant-Garde and Other Modernist Myths</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    MIT Press, 1986.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Kelly,
+                        Simon, &quot;'Strategies of Repetition': Millet/Corot,&quot; in Eik
+                        Kahng, ed., </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                            STYLE="font-size: 11pt"><I>The
+                    Repeating Image: Multiples in French Painting from David to Matisse</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Exh. cat. The Walters Art Museum, Baltimore. New Haven, Yale UP,
+                    2007, 53-81.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Lepine,
+                        Ayla, Matt Lodder, Rosalind Mckeer, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Revival:
+                    Memories, Identities, Utopias</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                             STYLE="font-size: 11pt">.
+                    London: Courtauld Books Online, 2015.
+                </FONT></FONT><A HREF="about:blank"><FONT COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2
+                        STYLE="font-size: 11pt"><U>courtauld.ac.uk/research/courtauld-books-online</U></FONT></FONT></FONT></A><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Life,
+                        Allen, &quot;The Oil Versions of Rossetti's </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2
+                                                            STYLE="font-size: 11pt"><I>Proserpine</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">&quot;&nbsp;[Appendix
+                    2], in </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Correspondence of Dante Gabriel Rossetti, </I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">ed.
+                    William Fredeman (Cambridge: D. S. Brewer, 2006) 6, part 1: 588-604.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Macfarlane,
+                        R. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Original
+                    Copy: Plagiarism &amp; Originality in 19th-C. Literature</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Oxford UP, 2007.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Macleod,
+                        Dianne Sachko. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                               STYLE="font-size: 11pt"><I>Art
+                    and the Victorian Middle Class: Money and the Making of Cultural</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                        STYLE="font-size: 11pt"><I>Identity</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Cambridge: Cambridge University Press, 1996.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Mainardi,
+                        P., “Copies, Variations, Replicas,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Visual
+                    Resources</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    15 (1999), 123-47.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Mainardi,
+                        P. “Impressionist Replication,&quot; Ján Bakos, ed. </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Artwork
+                    Through Market</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt">.
+                    Bratislava, 2004, 155-72.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Mainardi,
+                        P., “Déjà vu exhibition review,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>19th-C.
+                    Art Worldwide</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">,
+                    7/1 (2008), Online journal.
+                </FONT></FONT><A
+                        HREF="http://www.19thc-artworldwide.org/40-spring08/spring08review/102-deja-vu-revealing-repetition-in-french-masterpieces"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://www.19thc-artworldwide.org/40-spring08/spring08review/102-deja-vu-revealing-repetition-in-french-masterpieces</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Mainardi,
+                        P</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>.
+                    Another World: Nineteenth-Century Illustrated Print Culture</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    New Haven: Yale UP, 2017. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Malton</FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>,
+                </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Sara.
+                </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Forgery
+                    in Nineteenth-Century Literature and Culture. </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">New
+                    York: Palgrave Macmillan, 2009.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Marsh,
+                        Jan. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Dante
+                    Gabriel Rossetti: Painter and Poet</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                  STYLE="font-size: 11pt">.
+                    London: Weidenfeld &amp; Nicolson, 1999.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Massimi,
+                        Brian, &quot;Realer Than Real,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>Copyright</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    no. 1 (1987), 90-99. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in"><A
+                        HREF="http://www.brianmassumi.com/textes/REALER%20THAN%20REAL.pdf"><FONT COLOR="#0000ff"><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://www.brianmassumi.com/textes/REALER%20THAN%20REAL.pdf</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Millhauser,
+                        Steven, &quot;Replicas,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                              STYLE="font-size: 11pt"><I>Yale
+                    Review</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    83.3 (July 1995): 50-61.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Mills,
+                        Ernestine. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                           STYLE="font-size: 11pt"><I>The
+                    Life and Letters of Frederic Shields, 1833–</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">1911.
+                    London: Longmans, Green, 1912.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Miner,
+                        Dorothy, &quot;The Publishing Ventures of a Victorian Connoisseur: A
+                        Sidelight on William T. Walters,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Papers of the Bibliographical Society of America</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    57.3 (Third Quarter, 1963), 271-311. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Moss,
+                        Dorothy, “Translations, Appropriations, and Copies of Painting.&quot;
+                        Ph.D. diss, U of Delaware, 2012.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Murray,
+                        Charles Fairfax. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt"><I>Collection
+                    J. Pierpont Morgan: Drawings by the Old Masters, formed by C. Fairfax
+                    Murray</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    London; Privately printed, 1905-1912.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Nahum,
+                        Peter. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>Pre-Raphaelite,
+                    Symbolist, Visionary</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                    STYLE="font-size: 11pt">.
+                    Catalogue of exhibitions in New York and London, May 11-July 7,
+                    2001.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">National
+                        Gallery of Art, Washington. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt"><I>Retaining
+                    the Original: Multiple Originals, Copies and Reproductions</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Hanover and London: University Press of New England, 1989.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Orvell,
+                        Miles. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>The
+                    Real Thing: Imitation and Authenticity in American Culture</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    U of No. Carolina, 1989.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Peattie,
+                        Roger, ed. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                           STYLE="font-size: 11pt"><I>Selected
+                    Letters of William Michael Rossetti</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">.
+                    Penn State UP, 1990.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Pergam,
+                        Elizabeth A., &quot;Provenance as Pedigree: The Marketing of British
+                        Portraits in Gilded Age America,&quot; in Feigenbaum and Reist,
+                        104-22.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Emily
+                        Pugh, “</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>Nineteenth-Century
+                    Art Worldwide</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">’s
+                    ‘Digital Humanities and Art History’: Reflections on Our First
+                    Articles,” </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>Nineteenth-Century
+                    Art Worldwide </I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt">15,
+                    no. 1 (Spring 2016),
+                </FONT></FONT><A
+                        HREF="http://www.19thc-artworldwide.org/spring16/pugh-on-digital-humanities-art-%20history-our-first-articles"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://www.19thc-artworldwide.org/spring16/pugh-on-digital-humanities-art-
+                    history-our-first-articles</U></FONT></FONT></FONT></A><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Rathbone,
+                        E. et al. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                          STYLE="font-size: 11pt"><I>Van
+                    Gogh Repetitions</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                STYLE="font-size: 11pt">.
+                    New Haven: Yale UP, 2013 (exh. cat.).</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Raux
+                        Sophie, &quot;From Mariette to Joullain: Provenance and Value in
+                        Eighteenth-Century French Auction Catalogs,&quot; in Feigenbaum and
+                        Reist, 86-103.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Redford,
+                        George. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>Art
+                    Sales. A History of Sales of Pictures and other Works of Art</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">,
+                    2 vols. London, 1889.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Redgrave,
+                        Frances Margaret. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                  STYLE="font-size: 11pt"><I>Richard
+                    Redgrave, C.B., R.A.: A Memoir Compiled from his Diary</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    London: Cassell &amp; Co., 1891.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Reisinger,
+                        Y. and C. Steiner, &quot;Reconceptualizing Object Authenticity,&quot;
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Annals
+                    of Tourism Research</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">
+                    33.1 (2005), 65-86.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Reist,
+                        Inge, &quot;Introduction,&quot; in Reist, ed., </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>British
+                    Models of Art Collecting and the American Response</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Aldershot: Ashgate, 2014, 1-6. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Reitlinger,
+                        Gerald, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>The
+                    Economics of Taste</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                  STYLE="font-size: 11pt">.
+                    New York: Holt, Rinehart and Winston, 1964.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Renié,
+                        Pierre-Lin, &quot;The Image on the Wall: Prints as Decoration in
+                        Nineteenth-Century Interiors,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt"><I>NCAW</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    5.2 (Aut 2006), at
+                </FONT></FONT><A
+                        HREF="http://www.19thc-artworldwide.org/autumn06/49-autumn06/autumn06article/156-the-image-on-the-wall-prints-as-decoration-in-nineteenth-century-interiors"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://www.19thc-artworldwide.org/autumn06/49-autumn06/autumn06article/156-the-image-on-the-wall-prints-as-decoration-in-nineteenth-century-interiors</U></FONT></FONT></FONT></A><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Reynolds,
+                        Ada M. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                       STYLE="font-size: 11pt"><I>The
+                    Life and Work of Frank Holl</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                           STYLE="font-size: 11pt">.
+                    London: Methuen, 1912. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Rodríguez-Ortega,&nbsp;Nuria,
+                        &quot;Canon, Value and Artistic Culture: Critical Inquiry about the
+                        New Processes of Assigning Value in the Digital Realm,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Digital
+                    Humanities</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                          STYLE="font-size: 11pt">,
+                    University of Lausanne, at
+                </FONT></FONT><A HREF="http://dharchive.org/paper/DH2014/Paper-734.xml"><FONT COLOR="#0000ff"><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://dharchive.org/paper/DH2014/Paper-734.xml</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Rosenthal,
+                        Gertrude, et al. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt"><I>The
+                    George A. Lucas Collection of The Maryland Institute</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Exh. cat. Baltimore: The Baltimore Museum of Art, 1965.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Rossetti,
+                        Dante Rossetti. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                STYLE="font-size: 11pt"><I>Dante
+                    Gabriel Rossetti. His Family Letters</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">.
+                    2 vols. London: Ellis and Elvey, 1895.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Rossetti,
+                        William Michael. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt"><I>The
+                    Diary of William Michael Rossetti, 1870-1873</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">,
+                    ed. Odette Bornand. Oxford: Oxford UP, 1978.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Royal
+                        Academy of Arts. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt"><I>Pre-Raphaelite
+                    and Other Masters: The Andrew Lloyd Webber Collection</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Catalogue, 20 September-12 December 2003. </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Saffo,
+                        Paul, &quot;The Place of Originality in the Information Age,&quot; in
+                        Bierut, Michael, W. Drenttel, </FONT></FONT>
+                </P>
+                <P STYLE="margin-left: 0.5in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                            STYLE="font-size: 11pt">S.
+                    Heller, D. K. Holland, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                        STYLE="font-size: 11pt"><I>Looking
+                    Closer 2</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    New York: Allworth Press, 1997, 94-96.</FONT></FONT></P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Secrest,
+                    Meryle. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Duveen:
+                    A Life in Art</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt">.
+                    Chicago: University of Chicago Press, 2004. </FONT></FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Seligmann,
+                    Germain. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Merchants
+                    of Art: 1880-1960</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                 STYLE="font-size: 11pt">.
+                    New York: Appleton-Century-Crofts, 1961.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Shiff,
+                        Richard. “The Original, the Imitation, the Copy…,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Yale
+                    French Studies</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt">
+                    66 (1984), 27-54.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Sotheby's.
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Art
+                    at Auction, 1989-90</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">.
+                    London and New York: Sotheby's Publications and Rizzoli, 1989.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Sotheby's.
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Art
+                    at Auction, 1988-89</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">.
+                    London and New York: Sotheby's Publications and Harper &amp; Row,
+                    1990.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Sotheby's.
+                    </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>British
+                    Art, Victorian and Edwardian Art.</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                 STYLE="font-size: 11pt">
+                    Sale catalogue London 11 December 2007.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Spear,
+                        Richard E. &quot;Guercino's 'prix-fixe': Observations on Studio
+                        Practices and Art Marketing in Emilia,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Burlington Magazine</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                   STYLE="font-size: 11pt">
+                    136, No. 1098 (Sept 1994), 586.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Stansbie,
+                        Eleanor Fraser, “Christianity, Masculinity, Imperialism: </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Light of the World</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                  STYLE="font-size: 11pt">
+                    and Colonial Contexts of Display,&quot; in Amelia Yeates and Serena
+                    Trowbridge, eds. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt"><I>Pre-Raphaelite
+                    Masculinities: Constructions of Masculinity in Art and Literature</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Farnham: Ashgate, 2014, 189-212.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Stephens,
+                        F. G. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Dante
+                    Gabriel Rossetti</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                STYLE="font-size: 11pt">.
+                    London: Seeley and Co., 1896.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Stockhammer,
+                        Philipp W. and Corinna Forberg, “Introduction,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>The
+                    Transformative Power of the Copy</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                STYLE="font-size: 11pt">,
+                    eds. Stockhammer and Forberg Heidelberg UP, 2017, 1-17.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Surtees,
+                        Virginia, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                          STYLE="font-size: 11pt"><I>Dante
+                    Gabriel Rossetti, 1828-1882, The Paintings and Drawings: A Catalogue
+                    Raisonné</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    2 vols. Oxford: Clarendon Press, 1971.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Tate
+                        Papers</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                          STYLE="font-size: 11pt">
+                    Issue 8 on replicas (2007):
+                </FONT></FONT><A HREF="http://www.tate.org.uk/research/publications/tate-papers/issue-08"><FONT
+                        COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>http://www.tate.org.uk/research/publications/tate-papers/issue-08</U></FONT></FONT></FONT></A>
+                </P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Taussig,
+                        Michael. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Mimesis
+                    and Alterity</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                            STYLE="font-size: 11pt">.
+                    London: Routledge, 1993.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Thomas,
+                        David Wayne, &quot;Replicas and Originality: Picturing Agency in
+                        Dante Gabriel Rossetti and Victorian Manchester,&quot; </FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Victorian
+                    Studies</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    43/1 (Autumn 2000), 67-102.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Tucker,
+                        Paul, &quot;'Responsible Outsider': Charles Fairfax Murray and the
+                        South Kensington Museum,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                               STYLE="font-size: 11pt"><I>Journal
+                    of the History of Collections</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                             STYLE="font-size: 11pt">
+                    14.1 (2002): 115-37.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">von
+                        Hadeln, Detlev Baron, &quot;Originals and Replicas from Tintoretto's
+                        Studio,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                              STYLE="font-size: 11pt"><I>The
+                    Burlington Magazine for Connoisseurs</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT
+                        SIZE=2 STYLE="font-size: 11pt">
+                    43, No. 249 (Dec 1923), 286.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Verhoogt,
+                        Robert. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>Art
+                    in Reproduction: Nineteenth-Century Prints after Lawrence
+                    Alma-Tadema, Jozef Israëls, and Art Scheffer</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Amsterdam: Amsterdam UP, 2007.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Ward,
+                        G., ed. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                        STYLE="font-size: 11pt"><I>The
+                    Eye of the Beholder: Fakes, Replicas, and Alterations</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">.
+                    Yale Art Gallery, 1977.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Whyte,
+                        Ryan, “Repeat Performance: Chardin's Aesthetics of Repetition in
+                        the Paris Salons,&quot; </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                        STYLE="font-size: 11pt"><I>RACAR:
+                    Revue d'art Canadienne/Canadian Art Review</I></FONT></FONT><FONT
+                        FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    36, No. 1 (2011): 51-62.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Wolohojian,
+                        Stephan. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>A
+                    Private Passion: 19th–Century Paintings and Drawings from the
+                    Grenville L. Winthrop Collection</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                                                STYLE="font-size: 11pt">.
+                    Exh. cat. New York: Metropolitan Museum, 2003.</FONT></FONT></P>
+                <P STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                    <FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Wood,
+                        Christopher. </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                             STYLE="font-size: 11pt"><I>Forgery
+                    Replica Fiction</I></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2
+                                                                                               STYLE="font-size: 11pt">.
+                    Chicago: U of Chicago Press, 2008. </FONT></FONT>
+                </P>
+                <P STYLE="margin-bottom: 0in"><BR>
+                </P>
+
+            </div>
+        </div>
+        <div class="container-fluid tab-pane fade col-11" id="tab5">
+            <div class="col-12" style="margin-top: 3%;">
+                For additional information, to suggest new content, correct errors, or report technical
+                problems, please contact Julie Codell at Julie.codell@asu.edu
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript
+
+
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="/herberger/public/dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/herberger/public/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/herberger/lib/leaflet/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-polylinedecorator/1.1.0/leaflet.polylineDecorator.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/async/2.5.0/async.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script type="text/javascript">
+    /* To avoid the cache of google this is being used*/
+    function uuidv4() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/mappingText.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/comparisonTab.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/index.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/transactionNetwork.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/datatablesSetup.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/paintingsTab.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/chord_diagram.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = "/herberger/v2/public/js/histograms.js?v=" + uuidv4();
+    document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+
+
+</script>
+</body>
+</html>

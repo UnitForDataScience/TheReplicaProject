@@ -1,0 +1,22 @@
+REPLICA_ID,TITLE,YEAR,MEDIUM, SIZE Height (in),OWNER,OWNER #,owner date,owner_LOC,In London,abroad,UK provinces,LAT,LONG,owner_PRICE,owner_PROF
+126_01,Paolo and Francesca da Rimini,1855,w/c,9.75,John Ruskin,1,1855,London,yes,,,51.4670893,-0.01322139,36,writer
+126_01,Paolo and Francesca da Rimini,1855,w/c,9.75,William Morris,2,1865,London,yes,,,51.51412826,-0.14666944,1,artist
+126_01,Paolo and Francesca da Rimini,1855,w/c,9.75,George Rae,3,1896,Birkenhead,,,yes,53.390409,-3.032817,45.8,stockbroker
+126_01,Paolo and Francesca da Rimini,1855,w/c,9.75,Tate Museum,4,1916,London,yes,,,51.490989,-0.126651,1,museum
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,James Leathart,1,1862,Newcastle,,,yes,54.978252,-1.61778,1,manufacturer
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,T H Leathart,2,1896,"Low Angerton, Northumberland",,,yes,55.15,-1.86,0,descendant
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,Edmund Davis,3,1931,London,yes,,,51.37128525,-0.12895309,0,industrialist
+126_02,Paolo and Francesca da Rimini ,1862,w/c,13,Christies,4,1939,London,yes,,,51.57742746,-0.029682,0,auction house
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,Kerrison Preston,5,1939,Bournemouth,,,yes,50.720806,-1.904755,420,lawyer
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,Gordon Bottomley,6,1945,Silverdale/Carnforth,,,yes,54.170667,-2.825628,0,writer
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,Kerrison Preston,7,1948,Bournemouth,,,yes,50.720806,-1.904755,0,lawyer
+126_02,Paolo and Francesca da Rimini ,1862,w/c,13,Sothebys,8,1967,London,yes,,,51.54624657,-0.16545449,0,auction house
+126_02,Paolo and Francesca da Rimini,1862,w/c,13,Cecil Higgins Art Gallery,9,1974,Bedford,,,yes,52.136436,-0.46073,2500,museum
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,William Graham,1,1867,Glasgow,,,yes,55.864237,-4.251806,1,politician
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,Christies,2,1886,London,yes,,,51.57742746,-0.029682,0,auction house
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,William R Moss,3,1886,Bolton,,,yes,53.58333,-2.43333,404,manufacturer
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,Colonel W E Moss,4,1915,Sonning-on-Thames,,,yes,54.059388,-3.515625,0,descendant
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,Mrs Stolterforth,5,1954,Chester,,,yes,53.193392,-2.893075,0,descendant
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,Caroline Uhlman or Mrs Compton,6,1955,London,yes,,,51.38039998,-0.21916178,1,collector
+126_03,Paolo and Francesca da Rimini ,1867,w/c,15.75,Leicester Galleries,7,1956,London,yes,,,51.38392546,-0.04762393,1,dealer
+126_03,Paolo and Francesca da Rimini,1867,w/c,15.75,Felton Bequest and National Gallery of Victoria,8,1956,Melbourne,,yes,,-37.814,144.96332,1,museum
